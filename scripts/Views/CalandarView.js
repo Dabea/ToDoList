@@ -68,14 +68,16 @@ define(function(require) {
     CalandarView.prototype.dropaableLocation = function(event){
         event.preventDefault();
         dragSrc.remove();
-        var test = $(event.currentTarget).data('date');
-        console.log(test);
-        storageService.changeDueDate(dragTaskName, test);
+        var date = $(event.currentTarget).data('date');
+        storageService.changeDueDate(dragTaskName, date);
         event.currentTarget.appendChild(dragSrc);
     };
 
     CalandarView.prototype.dragStart = function(){
-        event.preventDefault();
+        if($(dragSrc).hasClass('js-calandar-task')) {
+            event.preventDefault();
+        }
+
     };
 
     CalandarView.prototype.selectedDay = function(event){
