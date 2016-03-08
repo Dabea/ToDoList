@@ -1,0 +1,713 @@
+html{
+    height: 100%;
+}
+body {
+    color: #535353;
+    font-family: "Open Sans","Helvetica",Arial,sans-serif;
+    font-size: 1.4em;
+    height: 100%;
+}
+.task{
+     border-bottom: 1px solid #d9d9d9;
+ }
+
+.task-item-hidden {
+    display: none;
+    width:4px;
+    border: 1px solid white;
+    content:'';
+    position:absolute;
+}
+
+.task-container{
+     background-color: #ffffff;
+     padding: 10px;
+     height: 100%;
+    display: block;
+    transition: .5s;
+    opacity: 1;
+    margin: 0px;
+
+
+ }
+
+.task-container-completed{
+    background-color: #ffffff;
+    padding: 5px;
+    height: 100%;
+    display: none;
+    transition: .5s;
+    opacity: 0;
+}
+
+.calandar-container{
+    display: none;
+}
+
+
+.complete-active .task-container-completed {
+    display: block;
+    opacity: 1;
+
+}
+
+.complete-active .task-container, .complete-active .calandar-container {
+    opacity: 0;
+    display: none;
+}
+
+.both-active .task-container-completed, .both-active .task-container{
+    opacity: 1;
+    display: block;
+}
+
+.calandar-active .task-container-completed, .calandar-active .task-container{
+    display: none;
+    opacity: 1;
+}
+
+
+.calandar-active .calandar-container{
+    display: block;
+}
+
+
+.circle-checkbox {
+    border: 1px solid #999999;
+    height: 15px;
+    width: 15px;
+    border-radius: 10px;
+    float: left;
+    margin: 5px;
+    transition: .5s;
+}
+
+.circle-checkbox:hover {
+    border: 1px solid #204d74;
+    height: 17px;
+    width: 17px;
+    margin: 2px;
+    margin-left: 3px;
+    margin-right: 5px;
+    margin-top: 3px;
+    margin-bottom: 5px;
+    transition: .5s;
+    position: relative;
+
+}
+
+
+.check{
+  position: relative;
+    height: 5px;
+    width: 11px;
+  width: 100%;
+  height: 100%;
+}
+
+.circle-checkbox-complete{
+    background-color: #4cae4c;
+    height: 17px;
+    width: 17px;
+    margin: 2px;
+    margin-left: 3px;
+    margin-right: 5px;
+    margin-top: 3px;
+    margin-bottom: -3px;
+    transition: .5s;
+    position: relative;
+}
+
+.circle-checkbox-complete-previously{
+    background-color: #d58512;
+}
+
+.circle-checkbox-complete .check-complete{
+    background-color: #4cae4c;
+    transition: .25s;
+}
+.check-complete{
+    width: 4px;
+    margin: auto;
+    height: 10px;
+    border: solid #222;
+    border-width: 0 1px 1px 0;
+    transform: rotate(45deg);
+    padding: 2px;
+    transition: .5s;
+}
+
+.edit{
+    color :#c9c9c9;
+    cursor: pointer;
+}
+
+.undo{
+    color: #FFa6a6;
+}
+
+.delete{
+    color: #FFa6a6;
+    cursor: pointer;
+}
+
+.delete:hover{
+    color:red;
+}
+
+.undo:hover{
+    color:red;
+    cursor: pointer;
+}
+
+.hidden {
+    display: none;
+}
+
+.error-input{
+    border-color: red;
+}
+.error-input:focus{
+    border-color: red;
+}
+
+.error-location{
+    color: red;
+}
+
+.task-template{
+
+    display: none;
+}
+.task-template-completed{
+
+    display: none;
+}
+.masthead{
+    background-color: #db4c3f;
+    overflow: hidden;
+    margin: 0;
+    padding: 5px;
+    color:#ffffff;
+    font-size: 2em;
+    border-top-right-radius: 5px;
+    border-top-left-radius: 5px;
+}
+.container{
+    padding: 0px;
+    border-top-right-radius: 5px;
+    border-top-left-radius: 5px;
+    overflow: visible;;
+    height: 100%;
+}
+
+
+.col-center{
+    float: none;
+    margin: 0 auto;
+}
+/*************************
+*  Modal
+***************************/
+.modal{
+     display:none;
+
+ }
+
+.modal-active{
+    color: #ffffff;
+    background-color: #122b40;
+    border-radius: 15px;
+    padding: 20px;
+    display: block;
+    position: fixed;
+    top: 15%;
+    left: 12.5%;
+    width: 75%;
+    height:50%;
+    height: 420px;
+
+}
+
+.modal-overlay{
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    background: rgba(51,51,51,0.8);
+    z-index: 10;
+}
+
+.input-modal-group{
+    margin-bottom: 50px;
+
+}
+
+
+.tint {
+    background-color: #f8f8f8;
+    border: 1px solid #d0d0d0;
+    bottom: 0px;
+
+}
+
+
+
+.wrapper{
+    position: relative;
+    padding: 0px;
+
+}
+
+/**
+*  SideBar List
+*/
+.list-selector{
+    list-style: none;
+    margin-top: 30px;
+    font-size: 1.4em;
+}
+
+.list-selector li{
+    cursor: pointer;
+    margin: 3px;
+}
+
+/***********************
+* Task Check
+***********************/
+
+.circle-checkbox {
+    border: 1px solid #999999;
+    height: 15px;
+    width: 15px;
+    border-radius: 10px;
+    float: left;
+    margin: 5px;
+    transition: .5s;
+}
+
+.circle-checkbox:hover {
+    border: 1px solid #204d74;
+    height: 17px;
+    width: 17px;
+    margin: 2px;
+    margin-left: 3px;
+    margin-right: 5px;
+    margin-top: 3px;
+    margin-bottom: 5px;
+    transition: .5s;
+    position: relative;
+
+}
+
+
+.check{
+    position: relative;
+    height: 5px;
+    width: 11px;
+    width: 100%;
+    height: 100%;
+}
+
+.circle-checkbox-complete{
+    background-color: #4cae4c;
+    height: 17px;
+    width: 17px;
+    margin: 2px;
+    margin-left: 3px;
+    margin-right: 5px;
+    margin-top: 3px;
+    margin-bottom: -3px;
+    transition: .5s;
+    position: relative;
+}
+
+.circle-checkbox-complete-previously{
+    background-color: #d58512;
+}
+
+.circle-checkbox-complete .check-complete{
+    background-color: #4cae4c;
+    transition: .25s;
+}
+.check-complete{
+    width: 4px;
+    margin: auto;
+    height: 10px;
+    border: solid #222;
+    border-width: 0 1px 1px 0;
+    transform: rotate(45deg);
+    padding: 2px;
+    transition: .5s;
+}
+
+
+/***********************
+* css Icon sets
+***********************/
+
+/* List Icon   */
+.list-icon{
+    position: relative;
+    border: 1px solid #000000;
+    border-radius: 3px;
+    width: 15px;
+    height: 20px;
+    overflow: auto;
+    display: block;
+    float: left;
+    margin-right: 5px;
+    text-align: center;
+}
+/* Outter Lines */
+.list-icon:before{
+    position: absolute;
+    border-top: 2px solid #000000;
+    border-bottom: 2px solid #000000;
+    border-radius: 0px;
+    content: ' ';
+    width: 76%;
+    height: 65%;
+    top:15%;
+    right:9.8%;
+}
+/* Inner Lines */
+.list-icon:after{
+    position: absolute;
+    border-top: 2px solid #000000;
+    border-bottom: 2px solid #000000;
+    border-radius: 0px;
+    display: block;
+    content: '';
+    width: 76%;
+    height: 28%;
+    top:33%;
+    right:9.8%;
+}
+
+/* ===========Complete Icon======= */
+/* Square */
+.complete-icon{
+    height: 10px;
+    width: 10px;
+    border: 1px solid #000000;
+    display: block;
+    float: left;
+    position: relative;
+    margin-right: 5px;
+    margin-top: 8px;
+}
+/* Check Mark */
+.complete-icon:before{
+    border-right: 3px solid green;
+    border-bottom: 3px solid green;
+    margin-top: -10px;
+    margin-left: 0px;
+    transform: rotate(45deg);
+    content: '';
+    display: block;
+    height: 200%;
+    width: 125%;
+
+}
+
+
+/*========== Calandar Month ================ */
+
+.calandar-month-icon{
+    border: 1px solid #000000;
+    height: 35px;
+    width: 35px;
+    border-radius: 5px;
+    position: relative;
+    float: left;
+    margin-right: 5px;
+    display: block;
+}
+/* Adds the 31 and centers it */
+.calandar-month-icon:before{
+     padding-left: 25%;
+    font-size: 90%;
+     content: '31';
+    margin-top: -3px;
+    position: absolute;
+    display: block;
+
+ }
+/* adds the bottom colored block and the month */
+.calandar-month-icon:after{
+    height: 50%;
+    width: 100%;
+    font-size: 75%;
+    border-radius: 0px 0px 5px 5px ;
+    border-bottom: 1px solid #000000;
+    padding-left: 17%;
+    margin-top: 52%;
+    background-color: red;
+    overflow: hidden;
+    display: block;
+    content: 'Jan';
+    position: absolute;
+}
+/* Optional Moth Changer  if Current Month is wanted*/
+.calandar-feb-icon.calandar-month-icon:after{
+    content: 'Feb';
+}
+/*=====================Mendu Slider ================= */
+.hambergler-menu .js-sidebar{
+   animation: .5s  sidebar-slide;
+    animation-fill-mode:forwards;
+}
+
+.hambergler-menu .js-task-wrapper, .hambergler-menu .task-container
+,.hambergler-menu .task-container-completed{
+   animation: .5s  body-strech;
+    animation-fill-mode:forwards;
+}
+
+.hambergler-menu .calandar-active{
+    width: 100%;
+    max-width: 100%;
+}
+
+.hambergler-menu .calandar-active{
+    width: 100%;
+    max-width: 100%;
+}
+
+
+.hambergler-menu .js-sidebar.col-xs-2{
+
+}
+@keyframes sidebar-slide {
+    0%{
+        margin-left: 0;
+    }
+    99%{
+        margin-left: -17%;
+        opacity: 0;
+    }
+    100%{
+        margin-left: -17%;
+        opacity: 0;
+        height: 0px;
+
+    }
+}
+
+@keyframes body-strech {
+    0%{
+        width: 70%;
+    }
+
+    100%{
+        width: 100%;
+        max-width: 100%;
+
+    }
+}
+
+
+/***********************
+* css Icon sets END
+***********************/
+
+.delete-backdrop{
+}
+
+.isanimateing .delete-backdrop{
+    background-color: #080808;
+    opacity: .5;
+    position: absolute;
+    display: block;
+    height: 80px;
+    width: 300px;
+    margin-top: -80px;
+    margin-left:-140px;
+
+}
+
+.del-wrapper{
+    overflow: hidden;
+    height: 0px;
+    width: 0px;
+    display: block;
+    z-index: 100;
+}
+
+.delete{
+    width: 25px;
+    height:25px;
+    display:block;
+    background-color:#F22613;
+    border-radius:5px;
+    color:white;
+    position: absolute;
+}
+
+.delete:before{
+    width:50%;
+    border-radius:5px;
+    left:6px;
+    top:11px;
+    border: 2px solid white;
+    content:'';
+    position: relative;
+    display:block;
+    transform:rotate(135deg);
+}
+.delete:after{
+    width:50%;
+    border-radius:5px;
+    left:6px;
+    top:7px;
+    border: 2px solid white;
+    content:'';
+    position: relative;
+    display:block;
+    transform:rotate(45deg);
+}
+
+.message{
+    position: absolute;
+
+    margin-left:-125px;
+    margin-top:-75px;
+    visibility: hidden;
+    width: 300px;
+
+
+}
+.isanimateing .message{
+    visibility: visible;
+    color:#ffffff;
+    opacity: 1;
+    z-index: 5;
+
+}
+.yes-btn{
+    margin-left:0px;
+    margin-top:1px;
+    height:25px;
+    width:25px;
+    border-radius:50%;
+    background-color:#F22613;
+    opacity:0;
+    cursor: pointer;
+    text-align:center;
+    line-height:25px;
+    position: absolute;
+    display: none;
+    color: #ffffff;
+}
+
+.no-btn{
+    display: none;
+    opacity: 0;
+    margin-left:-5px;
+    margin-top:-50px;
+    height:25px;
+    width:25px;
+    border-radius:50%;
+    background-color:red;
+    cursor: pointer;
+    text-align:center;
+    vertical-align:middle;
+    line-height:25px;
+    position: absolute;
+}
+
+.isanimateing .yes-btn{
+    display: block;
+    animation: strech .2s 0s 1 ease,
+    position .35s 0s 1 ease,
+    shiftRight .50s .30s 1 ease;
+    animation-fill-mode: forwards;
+    z-index: 1;
+}
+
+.isanimateing .no-btn{
+    display: block;
+    animation:  shiftLeft .5s .30s 1 ease;
+    animation-fill-mode: forwards;
+    z-index: 1;
+}
+
+.isanimateing .delete{
+    border-radius:100%;
+}
+
+.isanimateing-closeing .yes-btn{
+
+    animation: strech .2s 0s 1 ease reverse,
+    position .35s 0s 1 ease reverse,
+    shiftRight .50s .30s 1 ease reverse;
+}
+
+@keyframes strech{
+    0%{
+        opacity:0;
+        height:20px;
+    }
+    50%{
+        opacity:1;
+        height:40px;
+    }
+    100%{
+        opacity:1;
+    }
+}
+
+@keyframes position{
+    0%{text-indent: -9999999px;
+        margin-top:-20px;
+    }
+    50%{text-indent: -9999999px;
+        height:40px;
+    }
+    100%{
+        text-indent: -9999999px;
+        margin-top:-50px;
+
+    }
+}
+
+@keyframes shiftRight{
+    0%{
+        text-indent: -9999999px;
+
+    }
+    100%{
+        margin-left:40px;
+        background-color:green;
+        border-radius:0%;
+        width:60px;
+    }
+}
+
+@keyframes shiftLeft{
+    0%{
+        color:orange;
+        text-indent: -9999999px;
+        opacity: 1;
+
+
+    }
+    100%{
+        color:white;
+        opacity: 100;
+        margin-left:-80px;
+        background-color:orange;
+        border-radius:0%;
+        width:60px;
+
+    }
+}
+
+.task-header{
+
+    padding-bottom: 20px ;
+    border-bottom: 1px solid grey;
+}

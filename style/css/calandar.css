@@ -1,0 +1,44 @@
+.cal-day-hd{
+    border: 1px solid #000000;
+    margin-bottom: 0px;
+}
+.cal-day, .cal-day-no{
+
+     border: 1px solid #000000;
+     height: 150px;
+     margin: 0px;
+ }
+
+.cal-day-no{
+    border: 1px solid #000000;
+    background-color: gray;
+}
+
+
+.cal-day-selected{
+    background-color: #44aaFF;
+}
+
+
+.calandar-row{
+    margin-bottom: 0px;
+    border-top:1px solid #000000 ;
+    border-bottom:1px solid #000000 ;
+}
+
+.col-xs-1.cal7{
+    width: 14.28%;
+    margin-top: 0;
+}
+.row{
+    margin: 0;;
+}
+
+.dragable{
+    font-size: 10px;
+    background-color: orangered;
+    border-radius: 30px;
+    margin-bottom: 3px;
+
+}
+
