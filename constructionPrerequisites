@@ -1,2 +1,78 @@
-constructionPrerequisites
-Todo\scripts\lib*
+Project Outline
+This porject is a to-do list where you can create  tasks, These tasks can have a few types/catagories
+    Lists: like a grocery list or shopping list, general reminders of things
+    Tasks: these can be like clean house or go shopping, These can have a due date or time or even a range like this week
+    Goals: These are more long term and you can track your progress twards completeing it also can have a due date
+    Reminders: something like someones birtday, upcomeing event these can have times but also advanced warinings like the day before  or an hour before
+    Projects: These are bigger things that need to be done that will often have manny parts and will likey have sevral lists tasks and goals
+    Notes: gernal notes that you might want to look back on
+
+The Fetures
+Will have a calandar but also short cuts for set for today, tomorow short cuts. Will have selctors of month, day , time
+    *2-3*Upload feature so you can upload files  eg pictures.
+    *1-2*Send out reminders via email (or *3* text)
+    catagoires and lists will have priorty flag to choice importance
+    Show a clandar view with tasks.
+    *3-4* Reward system setging points for completeing tasks on time showing complete times or rate,
+
+Architecture
+The fron end will asscess the database though an API, The API will use JSON Objects,
+    *0* will be set up with dummy datta from a file after that it will connect though an built API,
+    *?* currenlty unsure what the backend API will be built with but it will likey use MySQL (between php or node.js)
+
+This is intended to be built with oop practices and will try to be as modular,
+This will be stored on my server and GitHub
+
+Project Dependices
+  jQuery 2.*
+  Requirejs
+  bootstrap 3.*
+  fontawesome    --* May make customer font sheet at (http://fontello.com/)
+  flatpicker (http://chmln.github.io/flatpickr/)  -this may change to other lib or may make my own but very likey choice.
+
+Current Document
+    *x* is refrance to versions 0 is pretty much dev/Production where 1 will be base functions working as a To-do List and task
+    currenty is unclear how far this project will go.
+
+
+
+
+
+Additonal Ideas and things to work on
+    Animation for the calandar either a slide or a flip animation
+    hamberget menu to show the options for when the screen is at a smaller size
+    Full screen option for the calandar
+    Add a Highlght for currenlty selected view
+    Add Animation to the delete Backdrop as it apears
+
+
+Current Bugs
+    Fixed - Deleted misplaced code
+    *when an event is moved on the calandar then deleted there is another task that  can apear on the list
+        **fix refresh the task list when its navagated to agin --This might be good to be done for all Tabs
+
+
+
+    The calandar boxs can be moved
+        -- Issue I think is caused by the prevent default on the drop location allowing anything to be droped inside?
+            ?? Possiable fix add a if statment if the grabed target has the class dragable?
+
+
+
+    Issue with Mobile events not working
+            ??Might be due to the type of the element
+            ?? Could try adding Jquery Touch event listner?
+
+
+Graphical Issues // Improvoments
+     Issue the events look a litte messed up when the screen goes to its smallest However dose not seem to affect mobile
+
+     The delete icon needs some more borders looks a little funny since it goes off the edge
+
+     Main body hieght not going all the way to the bottom
+
+     The Calandar Should proably be changed to event delegation
+
+
+
+
