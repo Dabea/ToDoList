@@ -4,7 +4,11 @@ define(function(require){
     var StorageService = require('model/StorageService');
     var storageService = new StorageService();
     var moment = require('moment');
+    var TemplateService = require('templates/CalandarTemplates');
+    var templateService = new TemplateService();
     var CalandarView = require('Views/CalandarView');
+    var TaskService = require('model/TaskService');
+    var taskService = new TaskService();
     var calandarService = new CalandarView();
     var add = true;
 
@@ -119,14 +123,9 @@ define(function(require){
         var description = $('.js-task-Description');
         var descriptionValue = description.val();
         var dueDate = $('.js-task-date');
-
-        var dueDateValue = dueDate.val();
-        dueDate.val('2016-03-03');
-
         var listSelector = $('.js-task-list');
-
         var listValue = listSelector.val().split(',');
-
+        var dueDateValue = dueDate.val();
         TaskView.prototype.addNewTask(taskNameValue ,dueDateValue,  descriptionValue , listValue);
         taskName.val('');
         description.val('');
@@ -160,7 +159,7 @@ define(function(require){
         this.createTaskList($newTask, taskList );
         $('.task-container').append($newTask);
         $('.js-task-group').addClass('hidden');
-        this.createTask(taskName, taskDescription, dueDate,'false', taskList);
+        taskService.createTask(taskName, taskDescription, dueDate,'false', taskList);
         calandarService.reloadCalandar();
     };
 
@@ -190,25 +189,7 @@ define(function(require){
         undoBtn.on('click', this.undo);
         $('.task-container-completed').append($newTask);
         $('.js-task-group').addClass('hidden');
-        this.createTask(taskName, taskDescription, dueDate, status, taskList);
-    };
-
-    TaskView.prototype.createTask = function(name, description, due, status, list){
-        var Task = {
-                name: name,
-                description: description,
-                list: list,
-                date: {
-                    created: Date.now(),
-                    due: due,
-                    completed: status
-                }
-        };
-        if(Task.date.due.length < 9){
-            Task.date.due = calandarService.getcurrentDate();
-        }
-        var parsedTask =  JSON.stringify(Task);
-        storageService.updateSavedInfo(name , parsedTask);
+        taskService.createTask(taskName, taskDescription, dueDate, status, taskList);
     };
 
     TaskView.prototype.selectTaskDisplayType = function(event){
@@ -229,7 +210,18 @@ define(function(require){
         this.updateTaskStatus($target);
     };
 
-    TaskView.prototype.showNewTaskMenu = function() {
+    TaskView.prototype.showNewTaskMenu = function(date) {
+        if(typeof undefined){
+            date = calandarService.getcurrentDate();
+        }
+        var formTemplate = templateService.getNewTaskForm(date);
+        $('.js-task-group').append(formTemplate);
+        $('.js-add-click').on('click', this.onAddButtonClick);
+        $('.task').on('click', this.onTaskClick);
+        $('.js-add').on('click', this.showNewTaskMenu);
+        $('.task-container').on('click', '.task .js-checkbox' , this.onTaskCompleteClick);
+        $('.js-task-name').on('input', this.checkTaskName);
+        $('.js-close-modal').on('click' , this.closeModal);
         $('.js-task-group').removeClass('hidden');
     };
 
