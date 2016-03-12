@@ -32,6 +32,14 @@ define(function(require){
         storageService.updateSavedInfo(name , parsedTask);
     };
 
+    Task.prototype.createTaskList = function($newTask, taskList) {
+        var taskListElement = $newTask.find('.task-list');
+        for(var i = 0; i < 3; i++){
+            var $taskList = $('<li></li>').text(taskList[i]);
+            taskListElement.append($taskList);
+        }
+    };
+
     return Task;
 
 });

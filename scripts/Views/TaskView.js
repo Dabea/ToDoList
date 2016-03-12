@@ -45,6 +45,7 @@ define(function(require){
         this.deleteAnimation = this.deleteAnimation.bind(this);
         this.deleteTask = this.deleteTask.bind(this);
         this.hambergerMenu = this.hambergerMenu.bind(this);
+        //this.taskDelegation = this.taskDelegation.bind(this);
 
     };
 
@@ -62,6 +63,8 @@ define(function(require){
         $('.js-confirm-delete-btn').on('click', this.deleteTask);
         $('.js-hamberger').on('click', this.hambergerMenu);
 
+        //$('.js-task-wrapper').on('click', this.taskDelegation);
+
     };
 
     TaskView.prototype.disable = function(){
@@ -77,6 +80,10 @@ define(function(require){
         $('.delete-confirmation').off('click', this.deleteAnimation);
         $('.js-confirm-delete-btn').off('click', this.deleteTask);
         $('.js-hamberger').on('click', this.hambergerMenu);
+
+    };
+
+    TaskView.prototype.taskDelegation = function(){
 
     };
 
@@ -156,19 +163,11 @@ define(function(require){
         taskListElement.html($taskDescription);
         $newTask.on('click',  this.onTaskClick);
         deleteConfirmation.on('click', this.deleteAnimation);
-        this.createTaskList($newTask, taskList );
+        taskService.createTaskList($newTask, taskList );
         $('.task-container').append($newTask);
         $('.js-task-group').addClass('hidden');
         taskService.createTask(taskName, taskDescription, dueDate,'false', taskList);
         calandarService.reloadCalandar();
-    };
-
-    TaskView.prototype.createTaskList = function($newTask, taskList) {
-        var taskListElement = $newTask.find('.task-list');
-        for(var i = 0; i < 3; i++){
-            var $taskList = $('<li></li>').text(taskList[i]);
-            taskListElement.append($taskList);
-        }
     };
 
     TaskView.prototype.addCompletedTask = function(taskName,dueDate, taskDescription, taskList){
