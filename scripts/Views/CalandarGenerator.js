@@ -29,6 +29,15 @@ define(function(require){
         return date.getDay();
     };
 
+    calandarGenerator.prototype.getcurrentDate = function(){
+        var date = new Date();
+        var day = date.getDate();
+        console.log('The day is:' +day);
+        var month = date.getMonth() +1;
+        var year = date.getFullYear();
+        return year + '-' + this.formatNumber(month) + '-' + this.formatNumber(day);
+    };
+
 
     return calandarGenerator;
 });

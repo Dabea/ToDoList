@@ -25,54 +25,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="todo.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="todo.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/todo.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.32" vertical-offset="1787" max-vertical-offset="2312">
-              <caret line="115" column="0" selection-start-line="115" selection-start-column="0" selection-end-line="115" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name=".gitignore" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/.gitignore">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="153">
-              <caret line="3" column="18" selection-start-line="3" selection-start-column="18" selection-end-line="3" selection-end-column="18" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="StorageService.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/scripts/model/StorageService.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="510" max-vertical-offset="2380">
-              <caret line="88" column="52" selection-start-line="88" selection-start-column="52" selection-end-line="88" selection-end-column="52" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="constructionPrerequisites" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/constructionPrerequisites">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-12.466666" vertical-offset="0" max-vertical-offset="1479">
-              <caret line="22" column="78" selection-start-line="22" selection-start-column="78" selection-end-line="22" selection-end-column="78" />
-              <folding />
-            </state>
-          </provider>
-          <provider editor-type-id="com.intellij.database.editor.CsvTableFileEditorProvider">
-            <state />
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="CalandarTemplates.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/scripts/templates/CalandarTemplates.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="95" max-vertical-offset="646">
-              <caret line="32" column="3" selection-start-line="32" selection-start-column="3" selection-end-line="32" selection-end-column="3" />
+            <state vertical-scroll-proportion="-3.7592592" vertical-offset="1769" max-vertical-offset="2227">
+              <caret line="116" column="0" selection-start-line="116" selection-start-column="0" selection-end-line="116" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -81,18 +38,18 @@
       <file leaf-file-name="main.css" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/style/css/main.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="8168" max-vertical-offset="12274">
-              <caret line="493" column="5" selection-start-line="493" selection-start-column="5" selection-end-line="493" selection-end-column="5" />
+            <state vertical-scroll-proportion="-5.5" vertical-offset="118" max-vertical-offset="12342">
+              <caret line="16" column="14" selection-start-line="16" selection-start-column="1" selection-end-line="16" selection-end-column="14" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="TaskView.js" pinned="false" current-in-tab="false">
+      <file leaf-file-name="TaskView.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/scripts/Views/TaskView.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-8.785714" vertical-offset="1148" max-vertical-offset="5814">
-              <caret line="82" column="0" selection-start-line="82" selection-start-column="0" selection-end-line="82" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.18614718" vertical-offset="560" max-vertical-offset="5661">
+              <caret line="38" column="63" selection-start-line="38" selection-start-column="63" selection-end-line="38" selection-end-column="63" />
               <folding />
             </state>
           </provider>
@@ -101,8 +58,8 @@
       <file leaf-file-name="TaskService.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/scripts/model/TaskService.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="116" max-vertical-offset="816">
-              <caret line="34" column="66" selection-start-line="34" selection-start-column="66" selection-end-line="34" selection-end-column="66" />
+            <state vertical-scroll-proportion="-5.571429" vertical-offset="116" max-vertical-offset="884">
+              <caret line="18" column="23" selection-start-line="18" selection-start-column="23" selection-end-line="18" selection-end-column="23" />
               <folding>
                 <element signature="e#0#45#0" expanded="false" />
               </folding>
@@ -113,8 +70,18 @@
       <file leaf-file-name="CalandarView.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/scripts/Views/CalandarView.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="1590" max-vertical-offset="3672">
-              <caret line="115" column="70" selection-start-line="115" selection-start-column="70" selection-end-line="115" selection-end-column="70" />
+            <state vertical-scroll-proportion="109.78571" vertical-offset="3856" max-vertical-offset="4726">
+              <caret line="46" column="0" selection-start-line="46" selection-start-column="0" selection-end-line="46" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="CalandarGenerator.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/scripts/Views/CalandarGenerator.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="71" max-vertical-offset="816">
+              <caret line="15" column="0" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -144,19 +111,20 @@
         <option value="$PROJECT_DIR$/cal.html" />
         <option value="$PROJECT_DIR$/scripts/App.js" />
         <option value="$PROJECT_DIR$/scripts/main.js" />
-        <option value="$PROJECT_DIR$/scripts/Views/CalandarGenerator.js" />
         <option value="$PROJECT_DIR$/scripts/templates/calandarTemplates.js" />
         <option value="$PROJECT_DIR$/style/css/calandar.css" />
         <option value="$PROJECT_DIR$/scripts/model/StorageService.js" />
+        <option value="$PROJECT_DIR$/scripts/model/Task.js" />
+        <option value="$PROJECT_DIR$/.gitignore" />
+        <option value="$PROJECT_DIR$/constructionPrerequisites" />
         <option value="$PROJECT_DIR$/style/css/main.css" />
         <option value="$PROJECT_DIR$/scripts/templates/CalandarTemplates.js" />
-        <option value="$PROJECT_DIR$/scripts/model/Task.js" />
-        <option value="$PROJECT_DIR$/scripts/Views/CalandarView.js" />
-        <option value="$PROJECT_DIR$/.gitignore" />
-        <option value="$PROJECT_DIR$/scripts/model/TaskService.js" />
-        <option value="$PROJECT_DIR$/constructionPrerequisites" />
-        <option value="$PROJECT_DIR$/scripts/Views/TaskView.js" />
         <option value="$PROJECT_DIR$/todo.html" />
+        <option value="$PROJECT_DIR$/scripts/Views/CalandarGenerator.js" />
+        <option value="$PROJECT_DIR$/scripts/templates/TaskForm.js" />
+        <option value="$PROJECT_DIR$/scripts/model/TaskService.js" />
+        <option value="$PROJECT_DIR$/scripts/Views/CalandarView.js" />
+        <option value="$PROJECT_DIR$/scripts/Views/TaskView.js" />
       </list>
     </option>
   </component>
@@ -165,7 +133,7 @@
     <option name="x" value="-1596" />
     <option name="y" value="5" />
     <option name="width" value="1594" />
-    <option name="height" value="723" />
+    <option name="height" value="649" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
     <OptionsSetting value="true" id="Add" />
@@ -359,7 +327,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-1596" y="5" width="1594" height="723" extended-state="0" />
+    <frame x="-1596" y="5" width="1594" height="649" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
@@ -406,7 +374,7 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/scripts/Views/CalandarView.js</url>
-          <line>210</line>
+          <line>272</line>
           <option name="timeStamp" value="1" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="javascript">
@@ -429,6 +397,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="128" max-vertical-offset="850">
           <caret line="18" column="28" selection-start-line="18" selection-start-column="27" selection-end-line="18" selection-end-column="28" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -641,14 +610,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/scripts/Views/CalandarGenerator.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="663">
-          <caret line="5" column="30" selection-start-line="5" selection-start-column="30" selection-end-line="5" selection-end-column="30" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/scripts/require.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.28849557" vertical-offset="24385" max-vertical-offset="36227">
@@ -661,6 +622,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.31560284" vertical-offset="128" max-vertical-offset="850">
           <caret line="18" column="28" selection-start-line="18" selection-start-column="27" selection-end-line="18" selection-end-column="28" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -668,14 +630,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.15602838" vertical-offset="65" max-vertical-offset="629">
           <caret line="9" column="0" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/scripts/Views/CalandarView.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="1590" max-vertical-offset="3672">
-          <caret line="115" column="70" selection-start-line="115" selection-start-column="70" selection-end-line="115" selection-end-column="70" />
           <folding />
         </state>
       </provider>
@@ -688,17 +642,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/style/css/main.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="8168" max-vertical-offset="12274">
-          <caret line="493" column="5" selection-start-line="493" selection-start-column="5" selection-end-line="493" selection-end-column="5" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/constructionPrerequisites">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-12.466666" vertical-offset="0" max-vertical-offset="1479">
+        <state vertical-scroll-proportion="0.8130435" vertical-offset="0" max-vertical-offset="1479">
           <caret line="22" column="78" selection-start-line="22" selection-start-column="78" selection-end-line="22" selection-end-column="78" />
           <folding />
         </state>
@@ -709,42 +655,66 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/scripts/model/StorageService.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2380">
+        <state vertical-scroll-proportion="-0.7326531" vertical-offset="1855" max-vertical-offset="2380">
           <caret line="88" column="52" selection-start-line="88" selection-start-column="52" selection-end-line="88" selection-end-column="52" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/scripts/model/TaskService.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="116" max-vertical-offset="816">
-          <caret line="34" column="66" selection-start-line="34" selection-start-column="66" selection-end-line="34" selection-end-column="66" />
-          <folding>
-            <element signature="e#0#45#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/scripts/Views/TaskView.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-8.785714" vertical-offset="1148" max-vertical-offset="5814">
-          <caret line="82" column="0" selection-start-line="82" selection-start-column="0" selection-end-line="82" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/scripts/templates/CalandarTemplates.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="95" max-vertical-offset="646">
-          <caret line="32" column="3" selection-start-line="32" selection-start-column="3" selection-end-line="32" selection-end-column="3" />
+        <state vertical-scroll-proportion="0.18930958" vertical-offset="0" max-vertical-offset="646">
+          <caret line="5" column="0" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/todo.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.32" vertical-offset="1787" max-vertical-offset="2312">
-          <caret line="115" column="0" selection-start-line="115" selection-start-column="0" selection-end-line="115" selection-end-column="0" />
+        <state vertical-scroll-proportion="-3.7592592" vertical-offset="1769" max-vertical-offset="2227">
+          <caret line="116" column="0" selection-start-line="116" selection-start-column="0" selection-end-line="116" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/scripts/Views/CalandarGenerator.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="71" max-vertical-offset="816">
+          <caret line="15" column="0" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/scripts/model/TaskService.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-5.571429" vertical-offset="116" max-vertical-offset="884">
+          <caret line="18" column="23" selection-start-line="18" selection-start-column="23" selection-end-line="18" selection-end-column="23" />
+          <folding>
+            <element signature="e#0#45#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/style/css/main.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-5.5" vertical-offset="118" max-vertical-offset="12342">
+          <caret line="16" column="14" selection-start-line="16" selection-start-column="1" selection-end-line="16" selection-end-column="14" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/scripts/Views/CalandarView.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="109.78571" vertical-offset="3856" max-vertical-offset="4726">
+          <caret line="46" column="0" selection-start-line="46" selection-start-column="0" selection-end-line="46" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/scripts/Views/TaskView.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.18614718" vertical-offset="560" max-vertical-offset="5661">
+          <caret line="38" column="63" selection-start-line="38" selection-start-column="63" selection-end-line="38" selection-end-column="63" />
           <folding />
         </state>
       </provider>

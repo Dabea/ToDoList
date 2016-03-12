@@ -14,6 +14,10 @@ body {
 
  }
 
+.task-selected{
+    background-color: #d0d0d0;
+}
+
 .task-item-hidden {
     display: none;
     width:4px;

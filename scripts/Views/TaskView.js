@@ -45,13 +45,12 @@ define(function(require){
         this.deleteAnimation = this.deleteAnimation.bind(this);
         this.deleteTask = this.deleteTask.bind(this);
         this.hambergerMenu = this.hambergerMenu.bind(this);
-        //this.taskDelegation = this.taskDelegation.bind(this);
+        this.onAddButtonClick = this.onAddButtonClick.bind(this);
 
     };
 
     TaskView.prototype.enable = function(){
         $('.js-add-click').on('click', this.onAddButtonClick);
-        $('.task').on('click', this.onTaskClick);
         $('.js-add').on('click', this.showNewTaskMenu);
         $('.task-container').on('click', '.task .js-checkbox' , this.onTaskCompleteClick);
         $('.js-task-name').on('input', this.checkTaskName);
@@ -62,14 +61,12 @@ define(function(require){
         $('.del-wrapper').on('click', this.deleteAnimation);
         $('.js-confirm-delete-btn').on('click', this.deleteTask);
         $('.js-hamberger').on('click', this.hambergerMenu);
-
-        //$('.js-task-wrapper').on('click', this.taskDelegation);
+        $('.js-task-wrapper').on('click','.task' , this.onTaskClick);
 
     };
 
     TaskView.prototype.disable = function(){
         $('.js-add-click').off('click', this.onAddButtonClick);
-        $('.task').off('click', this.onTaskClick);
         $('.js-add').off('click', this.showNewTaskMenu);
         $('.task-container').off('click', '.task .js-checkbox' , this.onTaskCompleteClick);
         $('.js-task-name').off('input', this.checkTaskName);
@@ -80,10 +77,6 @@ define(function(require){
         $('.delete-confirmation').off('click', this.deleteAnimation);
         $('.js-confirm-delete-btn').off('click', this.deleteTask);
         $('.js-hamberger').on('click', this.hambergerMenu);
-
-    };
-
-    TaskView.prototype.taskDelegation = function(){
 
     };
 
@@ -133,18 +126,19 @@ define(function(require){
         var listSelector = $('.js-task-list');
         var listValue = listSelector.val().split(',');
         var dueDateValue = dueDate.val();
-        TaskView.prototype.addNewTask(taskNameValue ,dueDateValue,  descriptionValue , listValue);
+        this.addNewTask(taskNameValue ,dueDateValue,  descriptionValue , listValue);
         taskName.val('');
         description.val('');
         dueDate.val('');
         listSelector.val('');
     };
 
-    TaskView.prototype.onTaskClick = function(event){
-        var $target = $(event.currentTarget);
+    TaskView.prototype.onTaskClick = function(){
+        $target = $(event.target);
         if($(event.target).is('.js-checkbox') || $(event.target).is('.check') ) {
            return;
         }
+        $target.toggleClass('task-selected');
         $target.find('.task-list').toggleClass('task-item-hidden');
     };
 
@@ -161,7 +155,6 @@ define(function(require){
         var taskListElement = $newTask.find('.task-list');
         var $taskDescription = $('<span></span>').text(taskDescription);
         taskListElement.html($taskDescription);
-        $newTask.on('click',  this.onTaskClick);
         deleteConfirmation.on('click', this.deleteAnimation);
         taskService.createTaskList($newTask, taskList );
         $('.task-container').append($newTask);
@@ -184,7 +177,6 @@ define(function(require){
         deleteConfirmation.on('click', this.deleteAnimation);
         taskListElement.html($taskDescription);
         taskListElement.append($taskList);
-        $newTask.on('click',  this.onTaskClick);
         undoBtn.on('click', this.undo);
         $('.task-container-completed').append($newTask);
         $('.js-task-group').addClass('hidden');
@@ -216,7 +208,6 @@ define(function(require){
         var formTemplate = templateService.getNewTaskForm(date);
         $('.js-task-group').append(formTemplate);
         $('.js-add-click').on('click', this.onAddButtonClick);
-        $('.task').on('click', this.onTaskClick);
         $('.js-add').on('click', this.showNewTaskMenu);
         $('.task-container').on('click', '.task .js-checkbox' , this.onTaskCompleteClick);
         $('.js-task-name').on('input', this.checkTaskName);

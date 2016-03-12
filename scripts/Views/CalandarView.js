@@ -9,14 +9,17 @@ define(function(require) {
     var CalandarGeneratorService = require('Views/CalandarGenerator');
     var $calandarContainer = $('.calandar-container');
     var StorageService = require('model/StorageService');
+    var TemplateService = require('templates/CalandarTemplates');
+    var templateService = new TemplateService();
     var storageService = new StorageService();
+    var TaskService = require('model/TaskService');
+    var taskService = new TaskService();
     var calandarGeneratorService = new CalandarGeneratorService($calandarContainer);
     var template = new Templates();
     var dragTaskName = '';
     var dragSrc = null;
     var numDaysInMonth = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31];
-
-
+    var add = true;
 
     var CalandarView = function () {
         this.init();
@@ -37,6 +40,9 @@ define(function(require) {
         this.editEvent = this.editEvent.bind(this);
         this.selectedDay = this.selectedDay.bind(this);
         this.createCalandar = this.createCalandar.bind(this);
+        this.reloadCalandar = this.reloadCalandar.bind(this);
+        this.onAddButtonClick = this.onAddButtonClick.bind(this);
+        //this.disableAddButton = this.disableAddButton.bind(this);
     };
 
     CalandarView.prototype.enableCalandarEvents = function(){
@@ -77,7 +83,6 @@ define(function(require) {
         if($(dragSrc).hasClass('js-calandar-task')) {
             event.preventDefault();
         }
-
     };
 
     CalandarView.prototype.selectedDay = function(event){
@@ -86,16 +91,8 @@ define(function(require) {
         $target.addClass('cal-day-selected');
     };
 
-    CalandarView.prototype.enlargeDay = function(){
-        var $target = $(event.currentTarget);
-        var date = $target.data('date');
-        console.log('this is the date: ' +date);
-
-    };
-
     CalandarView.prototype.editEvent = function(){
         event.stopPropagation();
-
     };
 
     CalandarView.prototype.loadTasksToCalandar = function(){
@@ -187,8 +184,6 @@ define(function(require) {
         this.createCalandar(this.currecntYear ,this.currentMonth);
     };
 
-
-
     CalandarView.prototype.formatNumber = function(number){
         if(number < 10){
             number = '0' + number;
@@ -204,6 +199,73 @@ define(function(require) {
         var year = date.getFullYear();
         return year + '-' + this.formatNumber(month) + '-' + this.formatNumber(day);
     };
+
+
+    /* Not So dry Code to due to prevent circlar refrances */
+
+    CalandarView.prototype.enlargeDay = function(){
+        var $target = $(event.currentTarget);
+        var date = $target.data('date');
+        console.log('this is the date: ' +date);
+        var formTemplate = templateService.getNewTaskForm(date);
+        $('.js-task-group').append(formTemplate);
+
+        $('.js-add-click').on('click', this.onAddButtonClick);
+        //$('.task').on('click', this.onTaskClick);  ****A calandar Version will need to be added ****
+        $('.js-task-name').on('input', this.checkTaskName);
+
+        $('.js-close-modal').on('click' , this.closeModal);
+        $('.js-task-group').removeClass('hidden');
+    };
+
+    CalandarView.prototype.closeModal = function(){
+        $('.js-task-group').addClass('hidden');
+    };
+
+    CalandarView.prototype.checkTaskName = function() {
+        var $taskName = $('.js-task-name');
+        var $errorLocation = $('.js-error-task-name-location');
+        var $addClick= $('.js-add-click');
+        var taskNameToCheck = $taskName.val();
+        var taskNames = storageService.getKeyValues();
+        for(var i = 0; i < taskNames.length; i++ ){
+            if(taskNames[i] ===  taskNameToCheck){
+                $taskName.addClass('error-input');
+                $errorLocation.html('X Task Name Allready Exisits Please Chose a new Task name');
+                this.disableAddButton();
+                $addClick.addClass('disabled');
+                return;
+            }else{
+                $taskName.removeClass('error-input');
+                if(!add){
+                    this.enableAddButton();
+                    $addClick.removeClass('disabled');
+                    $errorLocation.html('');
+                }
+            }
+        }
+    };
+
+    CalandarView.prototype.onAddButtonClick = function(){
+        var taskName = $('.js-task-name');
+        var taskNameValue = taskName.val();
+        var description = $('.js-task-Description');
+        var descriptionValue = description.val();
+        var dueDate = $('.js-task-date');
+        var listSelector = $('.js-task-list');
+        var listValue = listSelector.val().split(',');
+        var dueDateValue = dueDate.val();
+        taskService.createTask(taskNameValue, descriptionValue, dueDateValue,'false', listValue);
+        this.reloadCalandar();
+        $('.js-task-group').addClass('hidden');
+        taskName.val('');
+        description.val('');
+        dueDate.val('');
+        listSelector.val('');
+
+    };
+
+
 
     return CalandarView;
 

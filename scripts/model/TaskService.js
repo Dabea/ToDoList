@@ -4,10 +4,10 @@
 define(function(require){
     'use strict';
 
+    var $ = require('jquery');
     var StorageService = require('model/StorageService');
     var storageService = new StorageService();
-    var CalandarService = require('Views/CalandarView');
-    var calandarService = new CalandarService();
+
 
 
     var Task = function(){
@@ -26,7 +26,7 @@ define(function(require){
             }
         };
         if(Task.date.due.length < 9){
-            Task.date.due = calandarService.getcurrentDate();
+           // Task.date.due = calandarService.getcurrentDate();
         }
         var parsedTask =  JSON.stringify(Task);
         storageService.updateSavedInfo(name , parsedTask);
@@ -34,9 +34,13 @@ define(function(require){
 
     Task.prototype.createTaskList = function($newTask, taskList) {
         var taskListElement = $newTask.find('.task-list');
-        for(var i = 0; i < 3; i++){
-            var $taskList = $('<li></li>').text(taskList[i]);
-            taskListElement.append($taskList);
+
+        for(var i = 0; i < taskList.length; i++){
+            if(taskList[i] !== '')
+            {
+                var $taskList = $('<li></li>').text(taskList[i]);
+                taskListElement.append($taskList);
+            }
         }
     };
 
