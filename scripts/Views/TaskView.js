@@ -45,7 +45,7 @@ define(function(require){
         this.deleteAnimation = this.deleteAnimation.bind(this);
         this.deleteTask = this.deleteTask.bind(this);
         this.hambergerMenu = this.hambergerMenu.bind(this);
-        this.onAddButtonClick = this.onAddButtonClick.bind(this);
+        this.updateView = this.updateView.bind(this);
 
     };
 
@@ -62,6 +62,7 @@ define(function(require){
         $('.js-confirm-delete-btn').on('click', this.deleteTask);
         $('.js-hamberger').on('click', this.hambergerMenu);
         $('.js-task-wrapper').on('click','.task' , this.onTaskClick);
+        $('.update').on('click', this.updateView);
 
     };
 
@@ -127,14 +128,11 @@ define(function(require){
         var listValue = listSelector.val().split(',');
         var dueDateValue = dueDate.val();
         this.addNewTask(taskNameValue ,dueDateValue,  descriptionValue , listValue);
-        taskName.val('');
-        description.val('');
-        dueDate.val('');
-        listSelector.val('');
+        $('.js-task-group').empty();
     };
 
     TaskView.prototype.onTaskClick = function(){
-        $target = $(event.target);
+        var $target = $(event.target);
         if($(event.target).is('.js-checkbox') || $(event.target).is('.check') ) {
            return;
         }
@@ -143,7 +141,7 @@ define(function(require){
     };
 
     TaskView.prototype.closeModal = function(){
-        $('.js-task-group').addClass('hidden');
+        $('.js-task-group').empty();
     };
 
     TaskView.prototype.addNewTask = function(taskName,dueDate, taskDescription , taskList){
@@ -157,7 +155,7 @@ define(function(require){
         taskListElement.html($taskDescription);
         deleteConfirmation.on('click', this.deleteAnimation);
         taskService.createTaskList($newTask, taskList );
-        $('.task-container').append($newTask);
+        $('.task-area').append($newTask);
         $('.js-task-group').addClass('hidden');
         taskService.createTask(taskName, taskDescription, dueDate,'false', taskList);
         calandarService.reloadCalandar();
@@ -178,12 +176,13 @@ define(function(require){
         taskListElement.html($taskDescription);
         taskListElement.append($taskList);
         undoBtn.on('click', this.undo);
-        $('.task-container-completed').append($newTask);
+        $('.task-area-completed').append($newTask);
         $('.js-task-group').addClass('hidden');
         taskService.createTask(taskName, taskDescription, dueDate, status, taskList);
     };
 
     TaskView.prototype.selectTaskDisplayType = function(event){
+        this.updateView();
         var $target = $(event.target).closest('li');
         var active = $target.data('list') + '-active';
         var warpper = $('.js-task-wrapper');
@@ -205,11 +204,9 @@ define(function(require){
         if(typeof undefined){
             date = calandarService.getcurrentDate();
         }
-        var formTemplate = templateService.getNewTaskForm(date);
+        formTemplate = templateService.getNewTaskForm(date);
         $('.js-task-group').append(formTemplate);
         $('.js-add-click').on('click', this.onAddButtonClick);
-        $('.js-add').on('click', this.showNewTaskMenu);
-        $('.task-container').on('click', '.task .js-checkbox' , this.onTaskCompleteClick);
         $('.js-task-name').on('input', this.checkTaskName);
         $('.js-close-modal').on('click' , this.closeModal);
         $('.js-task-group').removeClass('hidden');
@@ -322,6 +319,11 @@ define(function(require){
         }
     };
 
+    TaskView.prototype.updateView = function(){
+        $('.task-area').html('');
+        $('.task-area-complete').html('');
+        this.restoreTaks();
+    };
 
     return TaskView;
 

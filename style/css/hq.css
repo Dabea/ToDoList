@@ -1,0 +1,872 @@
+.Harely-Quinn{
+    margin-left: 20em;
+    font-size: 5px;
+    border: 1px solid #000000;
+    /*X , Y , blur, size color */
+    box-shadow:
+        /* line 0 */
+    7em 0em 0 0 black,
+    8em 0em 0 0 black,
+    9em 0em 0 0 black,
+    10em 0em 0 0 black,
+    11em 0em 0 0 black,
+    12em 0em 0 0 black,
+    13em 0em 0 0 black,
+    14em 0em 0 0 black,
+    15em 0em 0 0 black,
+
+
+        /*Line 1 */
+    -4em 1em 0 0 black,
+    -3em 1em 0 0 black,
+    -2em 1em 0 0 black,
+    -1em 1em 0 0 black,
+    0em 1em 0 0 black,
+    1em 1em 0 0 black,
+    2em 1em 0 0 black,
+    5em 1em 0 0 black,
+    6em 1em 0 0 black,
+    7em 1em 0 0 black,
+    8em 1em 0 0 black,
+    9em 1em 0 0 black,
+    10em 1em 0 0 black,
+    11em 1em 0 0 black,
+    12em 1em 0 0 black,
+    13em 1em 0 0 black,
+    14em 1em 0 0 black,
+    15em 1em 0 0 black,
+    16em 1em 0 0 black,
+
+        /*Line 2 */
+    -6em 2em 0 0 black,
+    -5em 2em 0 0 black,
+    -4em 2em 0 0 red,
+    -3em 2em 0 0 red,
+    -2em 2em 0 0 black,
+    -1em 2em 0 0 black,
+    0em 2em 0 0 black,
+    1em 2em 0 0 black,
+    2em 2em 0 0 black,
+    5em 2em 0 0 black,
+    6em 2em 0 0 black,
+    7em 2em 0 0 black,
+    8em 2em 0 0 black,
+    9em 2em 0 0 black,
+    10em 2em 0 0 black,
+    11em 2em 0 0 black,
+    12em 2em 0 0 black,
+    13em 2em 0 0 black,
+    14em 2em 0 0 black,
+    15em 2em 0 0 black,
+    16em 2em 0 0 black,
+    17em 2em 0 0 black,
+
+        /*Line 3 */
+    -16em 3em 0 0 black,
+    -15em 3em 0 0 black,
+    -14em 3em 0 0 black,
+    -13em 3em 0 0 black,
+    -12em 3em 0 0 black,
+    -9em 3em 0 0 black,
+    -8em 3em 0 0 black,
+    -7em 3em 0 0 black,
+    -6em 3em 0 0 red,
+    -5em 3em 0 0 red,
+    -4em 3em 0 0 red,
+    -3em 3em 0 0 red,
+    -2em 3em 0 0 black,
+    -1em 3em 0 0 black,
+    0em 3em 0 0 black,
+    1em 3em 0 0 black,
+    2em 3em 0 0 black,
+    3em 3em 0 0 black,
+    4em 3em 0 0 black,
+    6em 3em 0 0 black,
+    7em 3em 0 0 black,
+    8em 3em 0 0 black,
+    9em 3em 0 0 black,
+    10em 3em 0 0 black,
+    11em 3em 0 0 black,
+    12em 3em 0 0 black,
+    13em 3em 0 0 black,
+    14em 3em 0 0 black,
+    15em 3em 0 0 black,
+    16em 3em 0 0 black,
+    17em 3em 0 0 black,
+    18em 3em 0 0 black,
+        /*Line 4 */
+    -17em 4em 0 0 black,
+    -16em 4em 0 0 red,
+    -15em 4em 0 0 red,
+    -14em 4em 0 0 red,
+    -13em 4em 0 0 red,
+    -12em 4em 0 0 red,
+    -11em 4em 0 0 black,
+    -10em 4em 0 0 black,
+    -9em 4em 0 0 red,
+    -8em 4em 0 0 red,
+    -7em 4em 0 0 red,
+    -6em 4em 0 0 red,
+    -5em 4em 0 0 red,
+    -4em 4em 0 0 red,
+    -3em 4em 0 0 red,
+    -2em 4em 0 0 red,
+    -1em 4em 0 0 black,
+    0em 4em 0 0 black,
+    1em 4em 0 0 black,
+    2em 4em 0 0 black,
+    3em 4em 0 0 black,
+    4em 4em 0 0 black,
+    5em 4em 0 0 black,
+    7em 4em 0 0 black,
+    8em 4em 0 0 black,
+    9em 4em 0 0 black,
+    10em 4em 0 0 black,
+    11em 4em 0 0 black,
+    12em 4em 0 0 black,
+    15em 4em 0 0 black,
+    16em 4em 0 0 black,
+    17em 4em 0 0 black,
+    19em 4em 0 0 black,
+        /*Line 5 */
+    -18em 5em 0 0 black,
+    -17em 5em 0 0 red,
+    -16em 5em 0 0 red,
+    -15em 5em 0 0 red,
+    -14em 5em 0 0 red,
+    -13em 5em 0 0 red,
+    -12em 5em 0 0 red,
+    -11em 5em 0 0 red,
+    -10em 5em 0 0 red,
+    -9em 5em 0 0 black,
+    -8em 5em 0 0 red,
+    -7em 5em 0 0 red,
+    -6em 5em 0 0 red,
+    -5em 5em 0 0 red,
+    -4em 5em 0 0 red,
+    -3em 5em 0 0 red,
+    -2em 5em 0 0 red,
+    -1em 5em 0 0 black,
+    0em 5em 0 0 black,
+    1em 5em 0 0 black,
+    2em 5em 0 0 black,
+    3em 5em 0 0 black,
+    4em 5em 0 0 black,
+    5em 5em 0 0 black,
+    6em 5em 0 0 black,
+    7em 5em 0 0 black,
+    8em 5em 0 0 black,
+    9em 5em 0 0 black,
+    10em 5em 0 0 black,
+    11em 5em 0 0 black,
+    17em 5em 0 0 black,
+    19em 5em 0 0 black,
+        /*Line 6 */
+    -19em 6em 0 0 black,
+    -18em 6em 0 0 red,
+    -17em 6em 0 0 red,
+    -16em 6em 0 0 red,
+    -15em 6em 0 0 red,
+    -14em 6em 0 0 red,
+    -13em 6em 0 0 red,
+    -12em 6em 0 0 red,
+    -11em 6em 0 0 red,
+    -10em 6em 0 0 red,
+    -9em 6em 0 0 red,
+    -8em 6em 0 0 red,
+    -7em 6em 0 0 red,
+    -6em 6em 0 0 red,
+    -5em 6em 0 0 red,
+    -4em 6em 0 0 red,
+    -3em 6em 0 0 red,
+    -2em 6em 0 0 red,
+    -1em 6em 0 0 black,
+    0em 6em 0 0 black,
+    1em 6em 0 0 black,
+    2em 6em 0 0 black,
+    3em 6em 0 0 black,
+    4em 6em 0 0 black,
+    5em 6em 0 0 black,
+    6em 6em 0 0 black,
+    8em 6em 0 0 black,
+    9em 6em 0 0 black,
+    10em 6em 0 0 black,
+    18em 6em 0 0 black,
+        /*Line 7 */
+    -19em 7em 0 0 black,
+    -18em 7em 0 0 red,
+    -17em 7em 0 0 red,
+    -16em 7em 0 0 red,
+    -15em 7em 0 0 red,
+    -14em 7em 0 0 black,
+    -13em 7em 0 0 red,
+    -12em 7em 0 0 red,
+    -11em 7em 0 0 red,
+    -10em 7em 0 0 red,
+    -9em 7em 0 0 black,
+    -8em 7em 0 0 red,
+    -7em 7em 0 0 red,
+    -6em 7em 0 0 red,
+    -5em 7em 0 0 red,
+    -4em 7em 0 0 black,
+    -3em 7em 0 0 black,
+    -2em 7em 0 0 black,
+    -1em 7em 0 0 black,
+    0em 7em 0 0 black,
+    1em 7em 0 0 black,
+    2em 7em 0 0 black,
+    3em 7em 0 0 black,
+    4em 7em 0 0 black,
+    5em 7em 0 0 black,
+    6em 7em 0 0 black,
+    9em 7em 0 0 black,
+    10em 7em 0 0 black,
+        /*Line 8 */
+
+    -18em 8em 0 0 black,
+    -17em 8em 0 0 red,
+    -16em 8em 0 0 red,
+    -15em 8em 0 0 red,
+    -14em 8em 0 0 black,
+    -13em 8em 0 0 red,
+    -12em 8em 0 0 red,
+    -11em 8em 0 0 red,
+    -10em 8em 0 0 black,
+    -9em 8em 0 0 red,
+    -8em 8em 0 0 red,
+    -7em 8em 0 0 red,
+    -6em 8em 0 0 red,
+    -5em 8em 0 0 black,
+    -4em 8em 0 0 white,
+    -3em 8em 0 0 white,
+    -2em 8em 0 0 white,
+    -1em 8em 0 0 white,
+    0em 8em 0 0 white,
+    1em 8em 0 0 white,
+    2em 8em 0 0 white,
+    3em 8em 0 0 white,
+    4em 8em 0 0 white,
+    5em 8em 0 0 white,
+    6em 8em 0 0 black,
+    7em 8em 0 0 black,
+    9em 8em 0 0 black,
+        /*Line 9 */
+    -18em 9em 0 0 black,
+    -17em 9em 0 0 red,
+    -16em 9em 0 0 red,
+    -15em 9em 0 0 red,
+    -14em 9em 0 0 black,
+    -13em 9em 0 0 black,
+    -12em 9em 0 0 red,
+    -11em 9em 0 0 red,
+    -10em 9em 0 0 black,
+    -9em 9em 0 0 red,
+    -8em 9em 0 0 red,
+    -7em 9em 0 0 red,
+    -6em 9em 0 0 black,
+    -5em 9em 0 0 white,
+    -4em 9em 0 0 white,
+    -3em 9em 0 0 white,
+    -2em 9em 0 0 white,
+    -1em 9em 0 0 white,
+    0em 9em 0 0 white,
+    1em 9em 0 0 white,
+    2em 9em 0 0 white,
+    3em 9em 0 0 white,
+    4em 9em 0 0 white,
+    5em 9em 0 0 white,
+    6em 9em 0 0 white,
+    7em 9em 0 0 black,
+    8em 9em 0 0 black,
+        /*Line 10 */
+    -18em 10em 0 0 black,
+    -17em 10em 0 0 red,
+    -16em 10em 0 0 red,
+    -15em 10em 0 0 red,
+    -14em 10em 0 0 black,
+    -12em 10em 0 0 black,
+    -11em 10em 0 0 red,
+    -10em 10em 0 0 black,
+    -9em 10em 0 0 red,
+    -8em 10em 0 0 red,
+    -7em 10em 0 0 red,
+    -6em 10em 0 0 black,
+    -5em 10em 0 0 white,
+    -4em 10em 0 0 white,
+    -3em 10em 0 0 white,
+    -2em 10em 0 0 white,
+    -1em 10em 0 0 white,
+    0em 10em 0 0 white,
+    1em 10em 0 0 white,
+    2em 10em 0 0 white,
+    3em 10em 0 0 black,
+    4em 10em 0 0 black,
+    5em 10em 0 0 black,
+    6em 10em 0 0 white,
+    7em 10em 0 0 white,
+    8em 10em 0 0 black,
+        /*Line 11 */  /* Heart STart */
+    -18em 11em 0 0 black,
+    -17em 11em 0 0 red,
+    -16em 11em 0 0 red,
+    -15em 11em 0 0 black,
+    -11em 11em 0 0 black,
+    -10em 11em 0 0 red,
+    -9em 11em 0 0 black,
+    -8em 11em 0 0 black,
+    -7em 11em 0 0 white,
+    -6em 11em 0 0 white,
+    -5em 11em 0 0 white,
+    -4em 11em 0 0 white,
+    -3em 11em 0 0 white,
+    -2em 11em 0 0 white,
+    -1em 11em 0 0 white,
+    0em 11em 0 0 white,
+    1em 11em 0 0 white,
+    2em 11em 0 0 black,
+    3em 11em 0 0 black,
+    4em 11em 0 0 black,
+    5em 11em 0 0 black,
+    6em 11em 0 0 black,
+    7em 11em 0 0 white,
+    8em 11em 0 0 black,
+
+        /*Line 12 */
+    -18em 12em 0 0 black,
+    -17em 12em 0 0 red,
+    -16em 12em 0 0 red,
+    -15em 12em 0 0 black,
+
+    -10em 12em 0 0 black,
+    -9em 12em 0 0 black,
+    -8em 12em 0 0 red,
+    -7em 12em 0 0 black,
+    -6em 12em 0 0 white,
+    -5em 12em 0 0 black,
+    -4em 12em 0 0 black,
+    -3em 12em 0 0 black,
+    -2em 12em 0 0 white,
+    -1em 12em 0 0 white,
+    0em 12em 0 0 white,
+    1em 12em 0 0 black,
+    2em 12em 0 0 white,
+    3em 12em 0 0 lightblue,
+    4em 12em 0 0 blue,
+    5em 12em 0 0 white,
+    6em 12em 0 0 black,
+    7em 12em 0 0 white,
+    8em 12em 0 0 black,
+        /*Line 13 */
+    -17em 13em 0 0 black,
+    -16em 13em 0 0 black,
+
+
+    -9em 13em 0 0 black,
+    -8em 13em 0 0 red,
+    -7em 13em 0 0 black,
+    -6em 13em 0 0 black,
+    -5em 13em 0 0 black,
+    -4em 13em 0 0 black,
+    -3em 13em 0 0 black,
+    -2em 13em 0 0 black,
+    -1em 13em 0 0 black,
+    0em 13em 0 0 black,
+    1em 13em 0 0 black,
+    2em 13em 0 0 white,
+    3em 13em 0 0 lightblue,
+    4em 13em 0 0 blue,
+    5em 13em 0 0 lightblue,
+    6em 13em 0 0 black,
+    7em 13em 0 0 white,
+    8em 13em 0 0 black,
+        /*Line 14 */
+    -17em 14em 0 0 black,
+    -16em 14em 0 0 white,
+    -15em 14em 0 0 black,
+
+
+    -8em 14em 0 0 black,
+    -7em 14em 0 0 black,
+    -6em 14em 0 0 black,
+    -5em 14em 0 0 lightblue,
+    -4em 14em 0 0 blue,
+    -3em 14em 0 0 white,
+    -2em 14em 0 0 black,
+    -1em 14em 0 0 black,
+    0em 14em 0 0 black,
+    1em 14em 0 0 black,
+    2em 14em 0 0 white,
+    3em 14em 0 0 white,
+    4em 14em 0 0 lightblue,
+    5em 14em 0 0 white,
+    6em 14em 0 0 black,
+    7em 14em 0 0 white,
+    8em 14em 0 0 black,
+        /*Line 15 */
+    -17em 15em 0 0 black,
+    -16em 15em 0 0 white,
+    -15em 15em 0 0 black,
+
+
+    -8em 15em 0 0 black,
+    -7em 15em 0 0 black,
+    -6em 15em 0 0 white,
+    -5em 15em 0 0 lightblue,
+    -4em 15em 0 0 blue,
+    -3em 15em 0 0 white,
+    -2em 15em 0 0 black,
+    -1em 15em 0 0 black,
+    0em 15em 0 0 black,
+    1em 15em 0 0 black,
+    2em 15em 0 0 white,
+    3em 15em 0 0 white,
+    4em 15em 0 0 white,
+    5em 15em 0 0 white,
+    6em 15em 0 0 black,
+    7em 15em 0 0 white,
+    8em 15em 0 0 black,
+        /*Line 16 */
+    -16em 16em 0 0 black,
+
+    -8em 16em 0 0 black,
+    -7em 16em 0 0 black,
+    -6em 16em 0 0 white,
+    -5em 16em 0 0 white,
+    -4em 16em 0 0 lightblue,
+    -3em 16em 0 0 white,
+    -2em 16em 0 0 black,
+    -1em 16em 0 0 black,
+    0em 16em 0 0 black,
+    1em 16em 0 0 black,
+    2em 16em 0 0 black,
+    3em 16em 0 0 black,
+    4em 16em 0 0 black,
+    5em 16em 0 0 black,
+    6em 16em 0 0 pink,
+    7em 16em 0 0 white,
+    8em 16em 0 0 black,
+        /*Line 17 */
+    -7em 17em 0 0 black,
+    -6em 17em 0 0 black,
+    -5em 17em 0 0 black,
+    -4em 17em 0 0 black,
+    -3em 17em 0 0 black,
+    -2em 17em 0 0 black,
+    -1em 17em 0 0 white,
+    0em 17em 0 0 white,
+    1em 17em 0 0 white,
+    2em 17em 0 0 white,
+    3em 17em 0 0 white,
+    4em 17em 0 0 white,
+    5em 17em 0 0 pink,
+    6em 17em 0 0 pink,
+    7em 17em 0 0 white,
+    8em 17em 0 0 black,
+    9em 17em 0 0 black,
+        /*Line 18 */
+    -7em 18em 0 0 black,
+    -6em 18em 0 0 pink,
+    -5em 18em 0 0 pink,
+    -4em 18em 0 0 white,
+    -3em 18em 0 0 white,
+    -2em 18em 0 0 white,
+    -1em 18em 0 0 white,
+    0em 18em 0 0 white,
+    1em 18em 0 0 white,
+    2em 18em 0 0 red ,
+    3em 18em 0 0 white,
+    4em 18em 0 0 white,
+    5em 18em 0 0 white,
+    6em 18em 0 0 white,
+    7em 18em 0 0 black,
+    8em 18em 0 0 tan,
+    9em 18em 0 0 tan,
+    10em 18em 0 0 black,
+
+        /*Line 19 */
+
+    -6em 19em 0 0 black,
+    -5em 19em 0 0 white,
+    -4em 19em 0 0 white,
+    -3em 19em 0 0 white,
+    -2em 19em 0 0 white,
+    -1em 19em 0 0 white,
+    0em 19em 0 0 red,
+    1em 19em 0 0 red,
+    2em 19em 0 0 white ,
+    3em 19em 0 0 white,
+    4em 19em 0 0 white,
+    5em 19em 0 0 white,
+    6em 19em 0 0 black,
+    7em 19em 0 0 tan,
+    8em 19em 0 0 tan,
+    9em 19em 0 0 tan,
+    10em 19em 0 0 tan,
+    11em 19em 0 0 black,
+
+        /*Line 20*/
+
+    -5em 20em 0 0 black ,
+    -4em 20em 0 0 white,
+    -3em 20em 0 0 white,
+    -2em 20em 0 0 white,
+    -1em 20em 0 0 white,
+    0em 20em 0 0 white,
+    1em 20em 0 0 white,
+    2em 20em 0 0 white ,
+    3em 20em 0 0 white,
+    4em 20em 0 0 white,
+    5em 20em 0 0 black,
+    6em 20em 0 0 tan,
+    7em 20em 0 0 tan,
+    8em 20em 0 0 tan,
+    9em 20em 0 0 tan,
+    10em 20em 0 0 tan,
+    11em 20em 0 0 tan,
+    12em 20em 0 0 black,
+        /*Line 21 */
+    -5em 21em 0 0 black ,
+    -4em 21em 0 0 black,
+    -3em 21em 0 0 black,
+    -2em 21em 0 0 black,
+    -1em 21em 0 0 black,
+    0em 21em 0 0 black,
+    1em 21em 0 0 black,
+    2em 21em 0 0 black ,
+    3em 21em 0 0 black,
+    4em 21em 0 0 black,
+    5em 21em 0 0 tan,
+    6em 21em 0 0 tan,
+    7em 21em 0 0 tan,
+    8em 21em 0 0 tan,
+    9em 21em 0 0 tan,
+    10em 21em 0 0 tan,
+    11em 21em 0 0 tan,
+    12em 21em 0 0 tan,
+    13em 21em 0 0 black,
+        /*Line 22 */
+
+    -1em 22em 0 0 black,
+    0em 22em 0 0 black,
+    1em 22em 0 0 red,
+    2em 22em 0 0 black ,
+    3em 22em 0 0 white,
+    4em 22em 0 0 black,
+    5em 22em 0 0 tan,
+    6em 22em 0 0 tan,
+    7em 22em 0 0 tan,
+    8em 22em 0 0 tan,
+    9em 22em 0 0 tan,
+    10em 22em 0 0 tan,
+    11em 22em 0 0 tan,
+    12em 22em 0 0 tan,
+    13em 22em 0 0 tan,
+    14em 22em 0 0 black,
+        /*Line 23 */
+    -2em 23em 0 0 black,
+    -1em 23em 0 0 black,
+    0em 23em 0 0 white,
+    1em 23em 0 0 white,
+    2em 23em 0 0 white ,
+    3em 23em 0 0 red,
+    4em 23em 0 0 black,
+    5em 23em 0 0 tan,
+    6em 23em 0 0 tan,
+    7em 23em 0 0 tan,
+    8em 23em 0 0 tan,
+    9em 23em 0 0 tan,
+    10em 23em 0 0 tan,
+    11em 23em 0 0 tan,
+    12em 23em 0 0 tan,
+    13em 23em 0 0 brown,
+    14em 23em 0 0 brown,
+    15em 23em 0 0 black,
+        /*Line 24 */
+    -2em 24em 0 0 black,
+    -1em 24em 0 0 black,
+    0em 24em 0 0 black,
+    1em 24em 0 0 white,
+    2em 24em 0 0 red ,
+    3em 24em 0 0 red,
+    4em 24em 0 0 black,
+    5em 24em 0 0 black,
+    6em 24em 0 0 tan,
+    7em 24em 0 0 tan,
+    8em 24em 0 0 tan,
+    9em 24em 0 0 tan,
+    10em 24em 0 0 tan,
+    11em 24em 0 0 tan,
+    12em 24em 0 0 brown,
+    13em 24em 0 0 brown,
+    14em 24em 0 0 tan,
+    15em 24em 0 0 tan,
+    16em 24em 0 0 black,
+        /*Line 25 */
+
+    -1em 25em 0 0 black,
+    0em 25em 0 0 black,
+    1em 25em 0 0 black,
+    2em 25em 0 0 red ,
+    3em 25em 0 0 black,
+    4em 25em 0 0 red,
+    5em 25em 0 0 black,
+    6em 25em 0 0 tan,
+    7em 25em 0 0 tan,
+    8em 25em 0 0 tan,
+    9em 25em 0 0 tan,
+    10em 25em 0 0 tan,
+    11em 25em 0 0 brown,
+    12em 25em 0 0 tan,
+    13em 25em 0 0 tan,
+    14em 25em 0 0 tan,
+    15em 25em 0 0 tan,
+    16em 25em 0 0 black,
+        /*Line 26 */
+    -1em 26em 0 0 black,
+    0em 26em 0 0 black,
+    1em 26em 0 0 red,
+    2em 26em 0 0 black ,
+    3em 26em 0 0 red,
+    4em 26em 0 0 black,
+    5em 26em 0 0 black,
+
+    6em 26em 0 0 black,
+    7em 26em 0 0 tan,
+    8em 26em 0 0 tan,
+    9em 26em 0 0 tan,
+    10em 26em 0 0 brown,
+    11em 26em 0 0 tan,
+    12em 26em 0 0 tan,
+    13em 26em 0 0 tan,
+    14em 26em 0 0 tan,
+    15em 26em 0 0 black,
+        /*Line 27 */
+    -1em 27em 0 0 black,
+    0em 27em 0 0 red,
+    1em 27em 0 0 black,
+    2em 27em 0 0 black ,
+    3em 27em 0 0 black,
+
+    6em 27em 0 0 black,
+    7em 27em 0 0 tan,
+    8em 27em 0 0 tan,
+    9em 27em 0 0 tan,
+    10em 27em 0 0 brown,
+    11em 27em 0 0 tan,
+    12em 27em 0 0 tan,
+    13em 27em 0 0 tan,
+    14em 27em 0 0 black,
+        /*Line 28 */
+    -2em 28em 0 0 black,
+    -1em 28em 0 0 red,
+    0em 28em 0 0 red,
+    1em 28em 0 0 black,
+    2em 28em 0 0 black ,
+    3em 28em 0 0 black,
+
+    7em 28em 0 0 black,
+    8em 28em 0 0 tan,
+    9em 28em 0 0 tan,
+    10em 28em 0 0 brown,
+    11em 28em 0 0 tan,
+    12em 28em 0 0 tan,
+    13em 28em 0 0 black,
+        /*Line 29 */
+    -1em 29em 0 0 black,
+    0em 29em 0 0 red,
+    1em 29em 0 0 black,
+    2em 29em 0 0 black ,
+    3em 29em 0 0 black,
+
+    8em 29em 0 0 black,
+    9em 29em 0 0 tan,
+    10em 29em 0 0 tan,
+    11em 29em 0 0 brown,
+    12em 29em 0 0 black,
+
+        /*Line 30 */
+    -2em 30em 0 0 black,
+    -1em 30em 0 0 red,
+    0em 30em 0 0 red,
+    1em 30em 0 0 black,
+    2em 30em 0 0 black ,
+    3em 30em 0 0 black,
+
+    9em 30em 0 0 black,
+    10em 30em 0 0 black,
+    11em 30em 0 0 black,
+
+        /*Line 31 */
+    -3em 31em 0 0 black,
+    -2em 31em 0 0 black,
+    -1em 31em 0 0 black,
+    0em 31em 0 0 red,
+    1em 31em 0 0 black,
+    2em 31em 0 0 black ,
+    3em 31em 0 0 black,
+
+        /*Line 32 */
+    -3em 32em 0 0 black,
+    -2em 32em 0 0 black,
+    -1em 32em 0 0 black,
+    0em 32em 0 0 red,
+    1em 32em 0 0 black,
+    2em 32em 0 0 black ,
+    3em 32em 0 0 black,
+        /*Line 33 */
+
+    0em 33em 0 0 black,
+    1em 33em 0 0 red,
+    2em 33em 0 0 black ,
+
+        /*Line 34 */
+    -1em 34em 0 0 black,
+    0em 34em 0 0 red,
+    1em 34em 0 0 black,
+    2em 34em 0 0 black ,
+
+        /*Line 35 */
+    -1em 35em 0 0 black,
+    0em 35em 0 0 red,
+    1em 35em 0 0 black,
+    2em 35em 0 0 black ,
+        /*Line 36 */
+    -1em 36em 0 0 black,
+    0em 36em 0 0 red,
+    1em 36em 0 0 black,
+    2em 36em 0 0 black ,
+    3em 36em 0 0 black ,
+        /*heart 11 */
+    12em 11em 0 0 red,
+    13em 11em 0 0 red,
+    15em 11em 0 0 red,
+    16em 11em 0 0 red,
+        /*heart 12 */
+    11em 12em 0 0 red,
+    12em 12em 0 0 black,
+    13em 12em 0 0 black,
+    14em 12em 0 0 red,
+    15em 12em 0 0 black,
+    16em 12em 0 0 black,
+    17em 12em 0 0 red,
+        /*heart 13 */
+    11em 13em 0 0 red,
+    12em 13em 0 0 black,
+    13em 13em 0 0 black,
+    14em 13em 0 0 black,
+    15em 13em 0 0 black,
+    16em 13em 0 0 black,
+    17em 13em 0 0 red,
+        /*heart 14 */
+
+    12em 14em 0 0 red,
+    13em 14em 0 0 black,
+    14em 14em 0 0 black,
+    15em 14em 0 0 black,
+    16em 14em 0 0 red,
+
+        /*heart 15 */
+
+    13em 15em 0 0 red,
+    14em 15em 0 0 black,
+    15em 15em 0 0 red,
+
+        /*heart 16 */
+    14em 16em 0 0 red,
+
+        /*Line 32 */
+
+        /*Line 37 */
+    0em 37em 0 0 black,
+    2em 37em 0 0 black,
+    3em 37em 0 0 black;
+
+
+    width: 1em;
+    height: 1em;
+    overflow: hidden;
+
+
+}
+
+
+/* ===== Harely Quinn ====== */
+/*  left Diamond */
+.harleyQuinn{
+    position: relative;
+    width: 11px;
+    height: 7px;
+    transform: rotate(69deg) skew(50deg);
+    display: block;
+    background-color: red;
+    left: 3px;
+    top: 20px;
+
+}
+/*  Bottom Diamond */
+
+.harleyQuinn:before{
+    position: absolute;
+    width: 11px;
+    height: 7px;
+    display: block;
+    background-color: red;
+    right: -130%;
+    bottom: 15%;
+    content: '';
+    overflow: hidden;
+    position: relative;
+position: absolute;
+}
+
+.harleyQuinn:after{
+    position: absolute;
+
+    width: 11px;
+    height: 7px;
+    display: block;
+    background-color: red;
+    right: -15%;
+    bottom: 125%;
+    content: '';
+}
+
+.greenLatern{
+    position: relative;
+    display: block;
+    height: 50px;
+    width: 50px;
+    border: 2px solid #32CD32;
+    border-radius: 100px;
+    background-color: #3D8B37;
+    box-shadow: 0px 0px 15px 3px #32CD32;
+
+
+}
+/* Top Squares */
+.greenLatern:before{
+    position: absolute;
+    display: block;
+    height: 78%;
+    width: 63%;
+    margin-top: 12%;
+    margin-left: 19%;
+    border-top: 6px solid #074C2A;
+    border-bottom: 6px solid #074C2A;
+    content: '';
+
+}
+/* Circle */
+.greenLatern:after{
+    position: absolute;
+    display: block;
+    border: 8px solid #074C2A;
+    height: 63%;
+    width: 63%;
+    margin-top: 19%;
+    margin-left: 20%;
+    border-radius: 100%;
+    content: '';
+}
+
+

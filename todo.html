@@ -16,6 +16,9 @@
             <span class="pull-left js-hamberger">[=]</span>
             Get Your Tasks On
         </div>
+        <span class="btn btn-primary update">
+            Update
+        </span>
     </div>
 <div >
 
@@ -32,6 +35,7 @@
 
 
         <div class="wrapper col-sm-10 col-xs-12 js-task-wrapper both-active"> <!-- Wrapper Start -->
+
             <div class=" col-sm-12 task-container " > <!--Task Container -->
                 <div class="col-xs-12 h1 task-header ">
                     <span class='col-xs-6 col-md-6'>Tasks</span>
@@ -45,32 +49,11 @@
                     </div>
 
                 </div>
-                <div class=" col-xs-12 task-template task"> <!-- Task HTML -->
-                    <div class="circle-checkbox js-checkbox "> <div class="check" > </div><!--Check Box --></div>
-                    <span class="task-name">Task Header</span>
-                    <span class=" pull-right  row delete-confirmation  ">
+                <div class="col-xs-12 task-area">
 
-                        <span class='message'>Are You Sure You Want to Delete this task?</span>
-                        <span class='del-wrapper ' >
-
-                            <span class='js-delete delete'></span>
-
-                            <span class='yes-btn js-confirm-delete-btn'>
-                                Yes!
-                            </span>
-                            <span class='no-btn'>
-                                No!
-                            </span>
-                            <span class='delete-backdrop'></span>
-                        </span>
-
-                    </span>
-                    <span class="edit pull-right col-xs-1 "> edit</span>
-                    <span class="task-date  pull-right col-xs-4"> date </span>
-                    <ul class="task-list  task-item-hidden ">
-
-                    </ul>
                 </div>
+
+
 
             </div><!-- Tasks complete Container End -->
 
@@ -101,6 +84,9 @@
                     <ul class="task-list  task-item-hidden ">
 
                     </ul>
+                    <div class="col-xs-12 task-area-complete">
+
+                    </div>
                 </div>
             </div><!-- Tasks complete Container End  -->
             <div class="calandarBase text-center calandar-container js-calandar">
@@ -119,6 +105,32 @@
 
 </div> <!--  End Add Task Form  -->
 
+</div>
+<div class=" col-xs-12 task-template task"> <!-- Task HTML -->
+    <div class="circle-checkbox js-checkbox "> <div class="check" > </div><!--Check Box --></div>
+    <span class="task-name">Task Header</span>
+                    <span class=" pull-right  row delete-confirmation  ">
+
+                        <span class='message'>Are You Sure You Want to Delete this task?</span>
+                        <span class='del-wrapper ' >
+
+                            <span class='js-delete delete'></span>
+
+                            <span class='yes-btn js-confirm-delete-btn'>
+                                Yes!
+                            </span>
+                            <span class='no-btn'>
+                                No!
+                            </span>
+                            <span class='delete-backdrop'></span>
+                        </span>
+
+                    </span>
+    <span class="edit pull-right col-xs-1 "> edit</span>
+    <span class="task-date  pull-right col-xs-4"> date </span>
+    <ul class="task-list  task-item-hidden ">
+
+    </ul>
 </div>
 <!-- the data-main in require js is pointed to the main js file from the broswers perspestive -->
 <script data-main="scripts/main" src="scripts/require.js"></script>

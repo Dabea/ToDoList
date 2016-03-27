@@ -42,7 +42,9 @@ define(function(require) {
         this.createCalandar = this.createCalandar.bind(this);
         this.reloadCalandar = this.reloadCalandar.bind(this);
         this.onAddButtonClick = this.onAddButtonClick.bind(this);
-        //this.disableAddButton = this.disableAddButton.bind(this);
+        this.disableAddButton = this.disableAddButton.bind(this);
+        this.enableAddButton = this.enableAddButton.bind(this);
+        this.checkTaskName = this.checkTaskName.bind(this);
     };
 
     CalandarView.prototype.enableCalandarEvents = function(){
@@ -203,17 +205,14 @@ define(function(require) {
 
     /* Not So dry Code to due to prevent circlar refrances */
 
+
     CalandarView.prototype.enlargeDay = function(){
         var $target = $(event.currentTarget);
         var date = $target.data('date');
-        console.log('this is the date: ' +date);
         var formTemplate = templateService.getNewTaskForm(date);
         $('.js-task-group').append(formTemplate);
-
         $('.js-add-click').on('click', this.onAddButtonClick);
-        //$('.task').on('click', this.onTaskClick);  ****A calandar Version will need to be added ****
         $('.js-task-name').on('input', this.checkTaskName);
-
         $('.js-close-modal').on('click' , this.closeModal);
         $('.js-task-group').removeClass('hidden');
     };
@@ -258,14 +257,24 @@ define(function(require) {
         taskService.createTask(taskNameValue, descriptionValue, dueDateValue,'false', listValue);
         this.reloadCalandar();
         $('.js-task-group').addClass('hidden');
-        taskName.val('');
-        description.val('');
-        dueDate.val('');
-        listSelector.val('');
+        $('.js-task-group').empty();
+    };
 
+    CalandarView.prototype.disableAddButton = function(){
+        $('.js-add-click').off('click', this.onAddButtonClick);
+        add = false;
+    };
+
+    CalandarView.prototype.enableAddButton = function(){
+        $('.js-add-click').on('click', this.onAddButtonClick);
+        add = true;
     };
 
 
+    CalandarView.prototype.removeModal = function(){
+
+
+    };
 
     return CalandarView;
 
