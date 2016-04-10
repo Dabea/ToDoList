@@ -142,6 +142,8 @@ define(function(require){
 
     TaskView.prototype.closeModal = function(){
         $('.js-task-group').empty();
+        $('.js-task-group').addClass('hidden');
+
     };
 
     TaskView.prototype.addNewTask = function(taskName,dueDate, taskDescription , taskList){
