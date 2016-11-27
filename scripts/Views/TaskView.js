@@ -1,4 +1,4 @@
-define(function(require){
+define(function (require) {
 
     var $ = require('jquery');
     var StorageService = require('model/StorageService');
@@ -12,12 +12,12 @@ define(function(require){
     var calandarService = new CalandarView();
     var add = true;
 
-    var TaskView = function(){
+    var TaskView = function () {
         this.init();
     };
 
-    TaskView.prototype.init = function(){
-       //storageService.clearSavedData();
+    TaskView.prototype.init = function () {
+        //storageService.clearSavedData();
         this.layout();
         this.setUpHandlers();
         this.enable();
@@ -26,13 +26,13 @@ define(function(require){
         console.log(test);
     };
 
-    TaskView.prototype.layout = function(){
+    TaskView.prototype.layout = function () {
         var day = moment().add(7, 'days');
         day = day.format('dddd MMMM Do YYYY');
-        $('.js-list').html('Still working hard ' + day );
+        $('.js-list').html('Still working hard ' + day);
     };
 
-    TaskView.prototype.setUpHandlers = function(){
+    TaskView.prototype.setUpHandlers = function () {
         this.onAddButtonClick = this.onAddButtonClick.bind(this);
         this.onTaskClick = this.onTaskClick.bind(this);
         this.onTaskCompleteClick = this.onTaskCompleteClick.bind(this);
@@ -45,70 +45,70 @@ define(function(require){
         this.deleteAnimation = this.deleteAnimation.bind(this);
         this.deleteTask = this.deleteTask.bind(this);
         this.hambergerMenu = this.hambergerMenu.bind(this);
-        this.onAddButtonClick = this.onAddButtonClick.bind(this);
+
 
     };
 
-    TaskView.prototype.enable = function(){
+    TaskView.prototype.enable = function () {
         $('.js-add-click').on('click', this.onAddButtonClick);
         $('.js-add').on('click', this.showNewTaskMenu);
-        $('.task-container').on('click', '.task .js-checkbox' , this.onTaskCompleteClick);
+        $('.task-container').on('click', '.task .js-checkbox', this.onTaskCompleteClick);
         $('.js-task-name').on('input', this.checkTaskName);
-        $('.js-close-modal').on('click' , this.closeModal);
-        $('.undo').on('click' , this.undo);
+        $('.js-close-modal').on('click', this.closeModal);
+        $('.undo').on('click', this.undo);
         $('.js-complete').on('click', this.completeTasks);
-        $('.js-list-selector ').on('click',this.selectTaskDisplayType);
+        $('.js-list-selector ').on('click', this.selectTaskDisplayType);
         $('.del-wrapper').on('click', this.deleteAnimation);
         $('.js-confirm-delete-btn').on('click', this.deleteTask);
         $('.js-hamberger').on('click', this.hambergerMenu);
-        $('.js-task-wrapper').on('click','.task' , this.onTaskClick);
+        $('.js-task-wrapper').on('click', '.task', this.onTaskClick);
 
     };
 
-    TaskView.prototype.disable = function(){
+    TaskView.prototype.disable = function () {
         $('.js-add-click').off('click', this.onAddButtonClick);
         $('.js-add').off('click', this.showNewTaskMenu);
-        $('.task-container').off('click', '.task .js-checkbox' , this.onTaskCompleteClick);
+        $('.task-container').off('click', '.task .js-checkbox', this.onTaskCompleteClick);
         $('.js-task-name').off('input', this.checkTaskName);
-        $('.js-close-modal').off('click' , this.closeModal);
-        $('.undo').off('click' , this.undo);
+        $('.js-close-modal').off('click', this.closeModal);
+        $('.undo').off('click', this.undo);
         $('.js-complete').off('click', this.completeTasks);
-        $('.js-list-selector ').off('click',this.selectTaskDisplayType);
+        $('.js-list-selector ').off('click', this.selectTaskDisplayType);
         $('.delete-confirmation').off('click', this.deleteAnimation);
         $('.js-confirm-delete-btn').off('click', this.deleteTask);
         $('.js-hamberger').on('click', this.hambergerMenu);
 
     };
 
-    TaskView.prototype.hambergerMenu = function(){
+    TaskView.prototype.hambergerMenu = function () {
         $('.container').toggleClass('hambergler-menu');
     };
 
-    TaskView.prototype.disableAddButton = function(){
+    TaskView.prototype.disableAddButton = function () {
         $('.js-add-click').off('click', this.onAddButtonClick);
         add = false;
     };
 
-    TaskView.prototype.enableAddButton = function(){
+    TaskView.prototype.enableAddButton = function () {
         $('.js-add-click').on('click', this.onAddButtonClick);
         add = true;
     };
 
-    TaskView.prototype.enableDeleteAnimation = function(){
+    TaskView.prototype.enableDeleteAnimation = function () {
         $('.delete-confirmation').on('click', this.deleteAnimation);
     };
 
 
-    TaskView.prototype.disableDeleteAnimation = function(){
+    TaskView.prototype.disableDeleteAnimation = function () {
         $('.delete-confirmation').off('click', this.deleteAnimation);
     };
 
 
-    TaskView.prototype.createChirdlren = function(){
+    TaskView.prototype.createChirdlren = function () {
 
     };
 
-    TaskView.prototype.deleteAnimation = function(event){
+    TaskView.prototype.deleteAnimation = function (event) {
         var $target = $(event.currentTarget);
         $('.js-confirm-delete-btn').on('click', this.deleteTask);
         $target.toggleClass('isanimateing');
@@ -117,36 +117,33 @@ define(function(require){
     };
 
 
-    TaskView.prototype.onAddButtonClick = function(){
+    TaskView.prototype.onAddButtonClick = function () {
         var taskName = $('.js-task-name');
-        var taskNameValue = taskName.val();
+        var taskNameValue = $('.js-task-name').val();
         var description = $('.js-task-Description');
         var descriptionValue = description.val();
         var dueDate = $('.js-task-date');
         var listSelector = $('.js-task-list');
         var listValue = listSelector.val().split(',');
         var dueDateValue = dueDate.val();
-        this.addNewTask(taskNameValue ,dueDateValue,  descriptionValue , listValue);
-        taskName.val('');
-        description.val('');
-        dueDate.val('');
-        listSelector.val('');
+        this.addNewTask(taskNameValue, dueDateValue, descriptionValue, listValue);
+        $('.js-js-task-group').remove();
     };
 
-    TaskView.prototype.onTaskClick = function(){
+    TaskView.prototype.onTaskClick = function () {
         $target = $(event.target);
-        if($(event.target).is('.js-checkbox') || $(event.target).is('.check') ) {
-           return;
+        if ($(event.target).is('.js-checkbox') || $(event.target).is('.check')) {
+            return;
         }
         $target.toggleClass('task-selected');
         $target.find('.task-list').toggleClass('task-item-hidden');
     };
 
-    TaskView.prototype.closeModal = function(){
-        $('.js-task-group').addClass('hidden');
+    TaskView.prototype.closeModal = function () {
+        $('.js-task-group').remove();
     };
 
-    TaskView.prototype.addNewTask = function(taskName,dueDate, taskDescription , taskList){
+    TaskView.prototype.addNewTask = function (taskName, dueDate, taskDescription, taskList) {
         var $newTask = $('.task-template').clone();
         $newTask.find('.task-name').html(taskName);
         $newTask.find('.task-date').html(dueDate);
@@ -156,21 +153,21 @@ define(function(require){
         var $taskDescription = $('<span></span>').text(taskDescription);
         taskListElement.html($taskDescription);
         deleteConfirmation.on('click', this.deleteAnimation);
-        taskService.createTaskList($newTask, taskList );
+        taskService.createTaskList($newTask, taskList);
         $('.task-container').append($newTask);
-        $('.js-task-group').addClass('hidden');
-        taskService.createTask(taskName, taskDescription, dueDate,'false', taskList);
-        calandarService.reloadCalandar();
+        $('.js-task-group').remove();
+        taskService.createTask(taskName, taskDescription, dueDate, 'false', taskList);
+        //calandarService.reloadCalandar();
     };
 
-    TaskView.prototype.addCompletedTask = function(taskName,dueDate, taskDescription, taskList){
+    TaskView.prototype.addCompletedTask = function (taskName, dueDate, taskDescription, taskList) {
         var $newTask = $('.task-template-completed').clone();
         $newTask.find('.task-name').html(taskName);
         $newTask.find('.task-date').html(dueDate);
         $newTask.removeClass('task-template-completed');
         var taskListElement = $newTask.find('.task-list');
         var $taskList = $('<li></li>').text(taskList);
-        var $taskDescription = $('<li></li>').text(taskDescription) ;
+        var $taskDescription = $('<li></li>').text(taskDescription);
         var status = true;
         var undoBtn = $newTask.find('.undo');
         var deleteConfirmation = $newTask.find('.delete-confirmation');
@@ -179,11 +176,12 @@ define(function(require){
         taskListElement.append($taskList);
         undoBtn.on('click', this.undo);
         $('.task-container-completed').append($newTask);
-        $('.js-task-group').addClass('hidden');
+
         taskService.createTask(taskName, taskDescription, dueDate, status, taskList);
+        $('.js-task-group').remove();
     };
 
-    TaskView.prototype.selectTaskDisplayType = function(event){
+    TaskView.prototype.selectTaskDisplayType = function (event) {
         var $target = $(event.target).closest('li');
         var active = $target.data('list') + '-active';
         var warpper = $('.js-task-wrapper');
@@ -191,7 +189,7 @@ define(function(require){
         warpper.addClass(active);
     };
 
-    TaskView.prototype.onTaskCompleteClick = function(event) {
+    TaskView.prototype.onTaskCompleteClick = function (event) {
         event.stopPropagation();
         var $target = $(event.currentTarget);
         var checkbox = $target;
@@ -201,32 +199,31 @@ define(function(require){
         this.updateTaskStatus($target);
     };
 
-    TaskView.prototype.showNewTaskMenu = function(date) {
-        if(typeof undefined){
+    TaskView.prototype.showNewTaskMenu = function (date) {
+        if (typeof undefined) {
             date = calandarService.getcurrentDate();
         }
         var formTemplate = templateService.getNewTaskForm(date);
-        $('.js-task-group').append(formTemplate);
+        $('.new-task-form').append(formTemplate);
         $('.js-add-click').on('click', this.onAddButtonClick);
-        $('.js-add').on('click', this.showNewTaskMenu);
-        $('.task-container').on('click', '.task .js-checkbox' , this.onTaskCompleteClick);
+        $('.task-container').on('click', '.task .js-checkbox', this.onTaskCompleteClick);
         $('.js-task-name').on('input', this.checkTaskName);
-        $('.js-close-modal').on('click' , this.closeModal);
-        $('.js-task-group').removeClass('hidden');
+        $('.js-close-modal').on('click', this.closeModal);
+
     };
 
-    TaskView.prototype.undo = function(event){
+    TaskView.prototype.undo = function (event) {
         event.stopPropagation();
         var $target = $(event.currentTarget);
-        $target.parent().fadeOut('slow', (function(){
+        $target.parent().fadeOut('slow', (function () {
             $target.text('edit');
             $target.removeClass('undo').addClass('edit');
-            $target.off('click' , this.undo);
+            $target.off('click', this.undo);
             var checkbox = $target.parent().find('.js-checkbox');
             checkbox.removeClass('circle-checkbox-complete-previously');
             var check = checkbox.find('.check');
             check.removeClass('check-complete');
-            $('.task-container').append( $target.parent().fadeIn('slow'));
+            $('.task-container').append($target.parent().fadeIn('slow'));
             this.updateTaskStatus($target);
         }).bind(this));
     };
@@ -235,21 +232,21 @@ define(function(require){
      * Add Fade out and in animation
      * Change Text to Undo and Add undo class and attach lisner
      */
-    TaskView.prototype.completeTasks = function() {
+    TaskView.prototype.completeTasks = function () {
         var completedCheckBox = $('.task-container').find('.circle-checkbox-complete');
         completedCheckBox.removeClass('circle-checkbox-complete');
         completedCheckBox.addClass('circle-checkbox-complete-previously');
         var completedTasks = completedCheckBox.parent();
-        completedTasks.fadeOut('slow', (function (){
+        completedTasks.fadeOut('slow', (function () {
             var edit = completedTasks.find('.edit');
             edit.text('undo');
             edit.on('click', this.undo);
             $('.task-container-completed').append(completedTasks.fadeIn('slow'));
             edit.removeClass('edit').addClass('undo');
         }).bind(this));
-    }; 
+    };
 
-    TaskView.prototype.updateTaskStatus = function($target){
+    TaskView.prototype.updateTaskStatus = function ($target) {
         var checkbox = $target.parent().find('.js-checkbox');
         var check = checkbox.find('.check');
         var taskName = $target.parent().find('.task-name').text();
@@ -258,10 +255,10 @@ define(function(require){
         var completedState = (check.hasClass('check-complete'));
         parsedStorage.date.completed = completedState;
         taskStorage = JSON.stringify(parsedStorage);
-        storageService.updateSavedInfo(taskName, taskStorage );
+        storageService.updateSavedInfo(taskName, taskStorage);
     };
 
-    TaskView.prototype.deleteTask = function(){
+    TaskView.prototype.deleteTask = function () {
         event.stopImmediatePropagation();
         var $target = $(event.currentTarget);
         var $taskRow = $target.closest('.delete-confirmation').parent();
@@ -273,14 +270,14 @@ define(function(require){
     };
 
     /* this should be moved to storage? */
-    TaskView.prototype.restoreTaks = function() {
-        for ( var i = 0, len2 = localStorage.length; i < len2; ++i ) {
-            var Task  = localStorage.getItem( localStorage.key( i ) );
+    TaskView.prototype.restoreTaks = function () {
+        for (var i = 0, len2 = localStorage.length; i < len2; ++i) {
+            var Task = localStorage.getItem(localStorage.key(i));
             var ParsedTask = JSON.parse(Task);
-            if(ParsedTask.date.completed === true){
-                this.addCompletedTask(ParsedTask.name,ParsedTask.date.due, ParsedTask.description, ParsedTask.list);
-            }else{
-                this.addNewTask(ParsedTask.name,ParsedTask.date.due, ParsedTask.description, ParsedTask.list);
+            if (ParsedTask.date.completed === true) {
+                this.addCompletedTask(ParsedTask.name, ParsedTask.date.due, ParsedTask.description, ParsedTask.list);
+            } else {
+                this.addNewTask(ParsedTask.name, ParsedTask.date.due, ParsedTask.description, ParsedTask.list);
             }
         }
     };
@@ -291,29 +288,29 @@ define(function(require){
      *
      * @method removeCheckedOffTasks
      */
-    TaskView.prototype.removeCheckedOffTasks = function(name){
-                localStorage.removeItem(name);
+    TaskView.prototype.removeCheckedOffTasks = function (name) {
+        localStorage.removeItem(name);
     };
     /**
      * This Checks to see if the Task Name is allready Taken
      * @method checkTaskName
      */
-    TaskView.prototype.checkTaskName = function() {
+    TaskView.prototype.checkTaskName = function () {
         var $taskName = $('.js-task-name');
         var $errorLocation = $('.js-error-task-name-location');
-        var $addClick= $('.js-add-click');
+        var $addClick = $('.js-add-click');
         var taskNameToCheck = $taskName.val();
         var taskNames = storageService.getKeyValues();
-        for(var i = 0; i < taskNames.length; i++ ){
-            if(taskNames[i] ===  taskNameToCheck){
+        for (var i = 0; i < taskNames.length; i++) {
+            if (taskNames[i] === taskNameToCheck) {
                 $taskName.addClass('error-input');
                 $errorLocation.html('X Task Name Allready Exisits Please Chose a new Task name');
                 this.disableAddButton();
                 $addClick.addClass('disabled');
                 return;
-            }else{
+            } else {
                 $taskName.removeClass('error-input');
-                if(!add){
+                if (!add) {
                     this.enableAddButton();
                     $addClick.removeClass('disabled');
                     $errorLocation.html('');
