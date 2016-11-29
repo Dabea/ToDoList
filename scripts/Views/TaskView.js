@@ -44,8 +44,6 @@ define(function (require) {
         this.deleteAnimation = this.deleteAnimation.bind(this);
         this.deleteTask = this.deleteTask.bind(this);
         this.hambergerMenu = this.hambergerMenu.bind(this);
-
-
     };
 
     TaskView.prototype.enable = function () {
@@ -61,7 +59,6 @@ define(function (require) {
         $('.js-confirm-delete-btn').on('click', this.deleteTask);
         $('.js-hamberger').on('click', this.hambergerMenu);
         $('.js-task-wrapper').on('click', '.task', this.onTaskClick);
-
     };
 
     TaskView.prototype.disable = function () {
@@ -76,7 +73,6 @@ define(function (require) {
         $('.delete-confirmation').off('click', this.deleteAnimation);
         $('.js-confirm-delete-btn').off('click', this.deleteTask);
         $('.js-hamberger').on('click', this.hambergerMenu);
-
     };
 
     TaskView.prototype.hambergerMenu = function () {
@@ -115,7 +111,9 @@ define(function (require) {
         event.stopPropagation();
     };
 
-
+    /**
+     * Gathers the infomation from the form and sends it for the task to be created
+     */
     TaskView.prototype.onAddButtonClick = function () {
         var taskName = $('.js-task-name');
         var taskNameValue = $('.js-task-name').val();
@@ -125,12 +123,15 @@ define(function (require) {
         var listSelector = $('.js-task-list');
         var listValue = listSelector.val().split(',');
         var dueDateValue = dueDate.val();
-        this.addNewTask(taskNameValue, dueDateValue, descriptionValue, listValue);
+        this.createNewTaskForm(taskNameValue, dueDateValue, descriptionValue, listValue);
         $('.js-js-task-group').remove();
     };
 
+    /**
+     * Enables the task items and descriptions to be shown when clicked
+     */
     TaskView.prototype.onTaskClick = function () {
-        $target = $(event.target);
+        var $target = $(event.target);
         if ($(event.target).is('.js-checkbox') || $(event.target).is('.check')) {
             return;
         }
@@ -142,7 +143,14 @@ define(function (require) {
         $('.js-task-group').remove();
     };
 
-    TaskView.prototype.addNewTask = function (taskName, dueDate, taskDescription, taskList) {
+    /**
+     * This will create the form for the user to imput the new task
+     * @param taskName
+     * @param dueDate
+     * @param taskDescription
+     * @param taskList
+     */
+    TaskView.prototype.createNewTaskForm = function (taskName, dueDate, taskDescription, taskList) {
         var $newTask = $('.task-template').clone();
         $newTask.find('.task-name').html(taskName);
         $newTask.find('.task-date').html(dueDate);
@@ -156,10 +164,16 @@ define(function (require) {
         $('.task-container').append($newTask);
         $('.js-task-group').remove();
         taskService.createTask(taskName, taskDescription, dueDate, 'false', taskList);
-        //calandarService.reloadCalandar();
     };
 
-    TaskView.prototype.addCompletedTask = function (taskName, dueDate, taskDescription, taskList) {
+    /**
+     * This will recreate the task and move it to the complete task
+     * @param taskName
+     * @param dueDate
+     * @param taskDescription
+     * @param taskList
+     */
+    TaskView.prototype.moveToCompletedTask = function (taskName, dueDate, taskDescription, taskList) {
         var $newTask = $('.task-template-completed').clone();
         $newTask.find('.task-name').html(taskName);
         $newTask.find('.task-date').html(dueDate);
@@ -175,9 +189,7 @@ define(function (require) {
         taskListElement.append($taskList);
         undoBtn.on('click', this.undo);
         $('.task-container-completed').append($newTask);
-
         taskService.createTask(taskName, taskDescription, dueDate, status, taskList);
-        $('.js-task-group').remove();
     };
 
     TaskView.prototype.selectTaskDisplayType = function (event) {
@@ -274,9 +286,9 @@ define(function (require) {
             var Task = localStorage.getItem(localStorage.key(i));
             var ParsedTask = JSON.parse(Task);
             if (ParsedTask.date.completed === true) {
-                this.addCompletedTask(ParsedTask.name, ParsedTask.date.due, ParsedTask.description, ParsedTask.list);
+                this.moveToCompletedTask(ParsedTask.name, ParsedTask.date.due, ParsedTask.description, ParsedTask.list);
             } else {
-                this.addNewTask(ParsedTask.name, ParsedTask.date.due, ParsedTask.description, ParsedTask.list);
+                this.createNewTaskForm(ParsedTask.name, ParsedTask.date.due, ParsedTask.description, ParsedTask.list);
             }
         }
     };
