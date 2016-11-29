@@ -2,3 +2,5 @@ constructionPrerequisites
 #External library's
 scripts/lib*
 scripts/require.js
+#Php Storm Files
+.idea*
