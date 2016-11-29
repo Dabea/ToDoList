@@ -1,0 +1,24 @@
+CodeStructure
+    Clean up code between New Task and  calandar View to make it more dry
+        new view for creating New tasks will likey need to be made
+    Renameing of function in the TaskView will need to be done
+        Mostly around creating new tasks and add new tasks since the names are not nessarly clear
+
+Syle
+    When makeing the app "Full Size" Make it apear its coverd vs fadeing off the screen
+
+    Improve the calandar View Task Display ( Long Descriptions will be off center and not in the highlight orange In smaller windows sizes
+
+
+
+
+Functional / UIX
+    Able to Edit the Tasks
+
+    Module that will open more infomation from the Calandar View when doulbe clicked
+
+    In task view improve the closeing interface currtly a litte pick on where it needs to be click inorder to reclose the description
+
+    Check all button to complete tasks
+
+    The Delete Yes No Boxs can go off screen on smaller views (It adds a Scrool Bar However is not a good UX)
