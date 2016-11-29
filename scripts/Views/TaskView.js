@@ -23,7 +23,6 @@ define(function (require) {
         this.enable();
         this.restoreTaks();
         var test = storageService.getAllSavedInfo();
-        console.log(test);
     };
 
     TaskView.prototype.layout = function () {

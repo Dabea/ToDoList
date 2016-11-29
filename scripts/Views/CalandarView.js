@@ -229,16 +229,14 @@ define(function (require) {
             if (taskNames[i] === taskNameToCheck) {
                 $taskName.addClass('error-input');
                 $errorLocation.html('X Task Name Allready Exisits Please Chose a new Task name');
-                this.disableAddButton();
+                //this.disableAddButton();
                 $addClick.addClass('disabled');
                 return;
             } else {
                 $taskName.removeClass('error-input');
-                if (!add) {
-                    this.enableAddButton();
+                    //this.enableAddButton();
                     $addClick.removeClass('disabled');
                     $errorLocation.html('');
-                }
             }
         }
     };
@@ -259,3 +257,4 @@ define(function (require) {
 
     return CalandarView;
 });
+
