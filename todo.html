@@ -8,10 +8,8 @@
     <link rel="stylesheet" href="style/css/calandar.css" type="text/css"/>
 </head>
 <body >
-
 <div class="container tint">
     <div class="col-xs-12 masthead"> <!--Masthead -->
-
         <div class="text-center">
             <span class="pull-left js-hamberger">[=]</span>
             Get Your Tasks On
@@ -24,11 +22,8 @@
                 <li class="col-xs-3 col-sm-12 btn row" data-list="complete"  ><span class="complete-icon"> </span> <span class="hidden-xs"> Completed </span></li>
                 <li class="col-xs-3 col-sm-12 btn row" data-list="both"  ><span class="list-icon"> </span> <span class="complete-icon"></span> <span class="hidden-xs">Both</span> </li>
                 <li class="col-xs-2 col-sm-12 btn row" data-list="calandar"  ><span class="calandar-month-icon calandar-feb-icon"> </span> <span class="hidden-xs">Calandar</span> </li>
-
             </ul>
         </div>
-
-
         <div class="wrapper col-sm-10 col-xs-12 js-task-wrapper both-active"> <!-- Wrapper Start -->
             <div class=" col-sm-12 task-container " > <!--Task Container -->
                 <div class="col-xs-12 h1 task-header ">
@@ -41,18 +36,14 @@
                             Complete
                         </div>
                     </div>
-
                 </div>
                 <div class=" col-xs-12 task-template task"> <!-- Task HTML -->
                     <div class="circle-checkbox js-checkbox "> <div class="check" > </div><!--Check Box --></div>
                     <span class="task-name">Task Header</span>
                     <span class=" pull-right  row delete-confirmation  ">
-
                         <span class='message'>Are You Sure You Want to Delete this task?</span>
                         <span class='del-wrapper ' >
-
                             <span class='js-delete delete'></span>
-
                             <span class='yes-btn js-confirm-delete-btn'>
                                 Yes!
                             </span>
@@ -61,15 +52,12 @@
                             </span>
                             <span class='delete-backdrop'></span>
                         </span>
-
                     </span>
                     <span class="edit pull-right col-xs-1 "> edit</span>
                     <span class="task-date  pull-right col-xs-4"> date </span>
                     <ul class="task-list  task-item-hidden ">
-
                     </ul>
                 </div>
-
             </div><!-- Tasks complete Container End -->
 
             <div class="col-xs-12     task-container-completed " > <!--Task Completed -->
@@ -106,12 +94,8 @@
     </div> <!-- Wrapper End -->
 </div>
     <!--****************   TEMPLATES - Start ****************** -->
-
 <div  class="new-task-form"></div>
-
 </div> <!--  End Add Task Form  -->
-
-
 <!-- the data-main in require js is pointed to the main js file from the broswers perspestive -->
 <script data-main="scripts/main" src="scripts/require.js"></script>
 </body>
