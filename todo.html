@@ -25,69 +25,29 @@
             </ul>
         </div>
         <div class="wrapper col-sm-10 col-xs-12 js-task-wrapper both-active"> <!-- Wrapper Start -->
-            <div class=" col-sm-12 task-container " > <!--Task Container -->
-                <div class="col-xs-12 h1 task-header ">
-                    <span class='col-xs-6 col-md-6'>Tasks</span>
-                    <div class='col-xs-6' >
-                        <div class="js-add btn btn-primary btn-sm   ">
-                            New Task
-                        </div>
-                        <div class="js-complete btn btn-warning btn-sm     ">
-                            Complete
-                        </div>
+            <div class="col-xs-12 h1 task-header ">
+                <span class='col-xs-6 col-md-6'>Tasks</span>
+                <div class='col-xs-6' >
+                    <div class="js-add btn btn-primary btn-sm   ">
+                        New Task
+                    </div>
+                    <div class="js-complete btn btn-warning btn-sm     ">
+                        Complete
+                    </div>
+                    <div class="js-clear btn btn-warning btn-sm">
+                        clear
                     </div>
                 </div>
-                <div class=" col-xs-12 task-template task"> <!-- Task HTML -->
-                    <div class="circle-checkbox js-checkbox "> <div class="check" > </div><!--Check Box --></div>
-                    <span class="task-name">Task Header</span>
-                    <span class=" pull-right  row delete-confirmation  ">
-                        <span class='message'>Are You Sure You Want to Delete this task?</span>
-                        <span class='del-wrapper ' >
-                            <span class='js-delete delete'></span>
-                            <span class='yes-btn js-confirm-delete-btn'>
-                                Yes!
-                            </span>
-                            <span class='no-btn'>
-                                No!
-                            </span>
-                            <span class='delete-backdrop'></span>
-                        </span>
-                    </span>
-                    <span class="edit pull-right col-xs-1 "> edit</span>
-                    <span class="task-date  pull-right col-xs-4"> date </span>
-                    <ul class="task-list  task-item-hidden ">
-                    </ul>
-                </div>
+            </div>
+            <div class=" col-sm-12 task-container " > <!--Task Container -->
+
             </div><!-- Tasks complete Container End -->
-
+            <div class="col-xs-12 h1  completed-header ">
+               Completed Tasks
+            </div>
             <div class="col-xs-12     task-container-completed " > <!--Task Completed -->
-                <div class="col-xs-12 h1 task-header ">
-                   Completed Tasks
-                </div>
-                <div class=" col-xs-12 task-template-completed task  task-completed"> <!-- Task HTML -->
-                    <div class="circle-checkbox js-checkbox circle-checkbox-complete-previously"> <div class="check check-complete" > </div><!--Check Box --></div>
-                    <span class="task-name col-xs-5">Task Header</span>
 
 
-                    <span class="task-date  col-xs-4"> date </span>
-                    <span class="undo  col-xs-1  " > undo</span>
-                     <span class=" col-xs-1  row delete-confirmation  ">
-                        <span class='message'>Are You Sure You Want to Delete this task?</span>
-                        <span class='del-wrapper ' >
-                            <span class='js-delete delete'></span>
-                            <span class='yes-btn js-confirm-delete-btn'>
-                                Yes!
-                            </span>
-                            <span class='no-btn'>f
-                                No!
-                            </span>
-                            <span class='delete-backdrop'></span>
-                        </span>
-                    </span>
-                    <ul class="task-list  task-item-hidden ">
-
-                    </ul>
-                </div>
             </div><!-- Tasks complete Container End  -->
             <div class="calandarBase text-center calandar-container js-calandar">
             </div>
@@ -96,7 +56,57 @@
     <!--****************   TEMPLATES - Start ****************** -->
 <div  class="new-task-form"></div>
 </div> <!--  End Add Task Form  -->
+<!-- Template for Editing tasks -->
+
+<!-- end Task Edit Template -->
 <!-- the data-main in require js is pointed to the main js file from the broswers perspestive -->
 <script data-main="scripts/main" src="scripts/require.js"></script>
+<!-- This is the template TODO should be moved to generated template -->
+
+<div class=" col-xs-12 task-template-completed task  task-completed"> <!-- Task HTML -->
+    <div class="circle-checkbox js-checkbox circle-checkbox-complete-previously"> <div class="check check-complete" > </div><!--Check Box --></div>
+    <span class="task-name col-xs-5">Task Header</span>
+
+
+    <span class="task-date  col-xs-4"> date </span>
+    <span class="undo  col-xs-1  " > undo</span>
+     <span class=" col-xs-1  row delete-confirmation  ">
+        <span class='message'>Are You Sure You Want to Delete this task?</span>
+        <span class='del-wrapper ' >
+            <span class='js-delete delete'></span>
+            <span class='yes-btn js-confirm-delete-btn'>
+                Yes!
+            </span>
+            <span class='no-btn'>f
+                No!
+            </span>
+            <span class='delete-backdrop'></span>
+        </span>
+    </span>
+    <ul class="task-list  task-item-hidden ">
+
+    </ul>
+</div>
+<div class=" col-xs-12 task-template task"> <!-- Task HTML -->
+    <div class="circle-checkbox js-checkbox "> <div class="check" > </div><!--Check Box --></div>
+    <span class="task-name">Task Header</span>
+    <span class=" pull-right  row delete-confirmation  ">
+        <span class='message'>Are You Sure You Want to Delete this task?</span>
+        <span class='del-wrapper ' >
+            <span class='js-delete delete'></span>
+            <span class='yes-btn js-confirm-delete-btn'>
+                Yes!
+            </span>
+            <span class='no-btn'>
+                No!
+            </span>
+            <span class='delete-backdrop'></span>
+        </span>
+    </span>
+    <span class="edit pull-right col-xs-1 "> edit</span>
+    <span class="task-date  pull-right col-xs-4"> date </span>
+    <ul class="task-list  task-item-hidden ">
+    </ul>
+</div>
 </body>
 </html>

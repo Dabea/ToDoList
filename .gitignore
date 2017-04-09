@@ -3,4 +3,4 @@ constructionPrerequisites
 scripts/lib*
 scripts/require.js
 #Php Storm Files
-.idea*
+.idea/*

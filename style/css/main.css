@@ -38,7 +38,7 @@ body {
 
  }
 
-.task-container-completed{
+.task-container-completed {
     background-color: #ffffff;
     padding: 5px;
     height: 100%;
@@ -47,28 +47,28 @@ body {
     opacity: 0;
 }
 
-.calandar-container{
+.calandar-container {
     display: none;
 }
 
 
-.complete-active .task-container-completed {
+.complete-active .task-container-completed,.complete-active .completed-header {
     display: block;
     opacity: 1;
 
 }
 
-.complete-active .task-container, .complete-active .calandar-container {
+.complete-active .task-container, .complete-active .calandar-container, .complete-active .task-header {
     opacity: 0;
     display: none;
 }
 
-.both-active .task-container-completed, .both-active .task-container{
+.both-active .task-container-completed, .both-active .task-container, .both-active .completed-header {
     opacity: 1;
     display: block;
 }
 
-.calandar-active .task-container-completed, .calandar-active .task-container{
+.calandar-active .task-container-completed, .calandar-active .task-container, .calandar-active .task-header, .calandar-active .completed-header{
     display: none;
     opacity: 1;
 }
@@ -715,7 +715,12 @@ body {
 }
 
 .task-header{
-
     padding-bottom: 20px ;
     border-bottom: 1px solid grey;
+}
+
+.completed-header{
+    padding-bottom: 20px ;
+    border-bottom: 1px solid grey;
+    display: none;
 }
