@@ -133,6 +133,7 @@ define(function (require) {
     TaskView.prototype.onTaskClick = function () {
         var $target = $(event.target);
         if ($(event.target).is('.js-checkbox') || $(event.target).is('.check')) {
+
             return;
         }
         $target.toggleClass('task-selected');

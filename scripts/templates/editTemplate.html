@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<div>
+    <div class='js-task-group modal-overlay  '>
+        <div class='js-modal modal-active '>
+            <div class='pull-right js-close-modal delete-confirmation'>X</div>
+            <div class='text-center h1'> Create a New Task!</div>
+            <div class='input-modal-group'>Add a Task <span
+                    class='js-error-task-name-location error-location col-xs-11 pull-right'></span>
+
+                <div class='col-xs-12 '>
+                    <div class='col-xs-12 row'><input type='text' class='form-control js-task-name'></div>
+                </div>
+            </div>
+            <div class='input-modal-group'> Due Date
+                <div class='col-xs-12 '>
+                    <div class='col-xs-12 row'>
+                        <input type='date' class='form-control js-task-date' value='" + date +"'>
+                    </div>
+                </div>
+            </div>
+            <div class='input-modal-group'>Add a Description
+                <div class='col-xs-12  '>
+                    <div class='col-xs-12 row'><input type='text' class='form-control js-task-Description'></div>
+                </div>
+            </div>
+            <div class='input-modal-group'>Add a List (Seperate List items with a comma)
+                <div class='col-xs-12  '>
+                    <div class='col-xs-12 row'><input type='text' class='form-control js-task-list'></div>
+                </div>
+            </div>
+            <div class='col-xs-1 pull-right'>
+                <button class='btn  btn-lg btn-success js-add-click'>Add</button>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>
