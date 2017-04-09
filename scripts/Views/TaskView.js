@@ -21,7 +21,7 @@ define(function (require) {
         this.layout();
         this.setUpHandlers();
         this.enable();
-        this.restoreTaks();
+        this.restoreTasks();
         var test = storageService.getAllSavedInfo();
     };
 
@@ -44,6 +44,10 @@ define(function (require) {
         this.deleteAnimation = this.deleteAnimation.bind(this);
         this.deleteTask = this.deleteTask.bind(this);
         this.hambergerMenu = this.hambergerMenu.bind(this);
+
+        this.clearCompletedTasksArea = this.clearCompletedTasksArea.bind(this);
+        this.clearTasksArea = this.clearTasksArea.bind(this);
+        this.reloadTasks = this.reloadTasks.bind(this);
     };
 
     TaskView.prototype.enable = function () {
@@ -59,6 +63,7 @@ define(function (require) {
         $('.js-confirm-delete-btn').on('click', this.deleteTask);
         $('.js-hamberger').on('click', this.hambergerMenu);
         $('.js-task-wrapper').on('click', '.task', this.onTaskClick);
+        $('.js-clear').on('click', this.reloadTasks);
     };
 
     TaskView.prototype.disable = function () {
@@ -133,7 +138,6 @@ define(function (require) {
     TaskView.prototype.onTaskClick = function () {
         var $target = $(event.target);
         if ($(event.target).is('.js-checkbox') || $(event.target).is('.check')) {
-
             return;
         }
         $target.toggleClass('task-selected');
@@ -197,6 +201,7 @@ define(function (require) {
         var $target = $(event.target).closest('li');
         var active = $target.data('list') + '-active';
         var warpper = $('.js-task-wrapper');
+        this.reloadTasks();
         warpper.removeClass('task-active complete-active both-active calandar-active');
         warpper.addClass(active);
     };
@@ -282,7 +287,7 @@ define(function (require) {
     };
 
     /* this should be moved to storage? */
-    TaskView.prototype.restoreTaks = function () {
+    TaskView.prototype.restoreTasks = function () {
         for (var i = 0, len2 = localStorage.length; i < len2; ++i) {
             var Task = localStorage.getItem(localStorage.key(i));
             var ParsedTask = JSON.parse(Task);
@@ -292,6 +297,24 @@ define(function (require) {
                 this.createNewTaskForm(ParsedTask.name, ParsedTask.date.due, ParsedTask.description, ParsedTask.list);
             }
         }
+    };
+
+    TaskView.prototype.clearTasksArea = function () {
+        $taskArea = $('.task-container');
+        $taskArea.html('');
+        console.log($taskArea);
+    };
+
+    TaskView.prototype.clearCompletedTasksArea = function () {
+        $taskArea = $('.task-container-completed');
+        $taskArea.html('');
+        console.log($taskArea);
+    };
+
+    TaskView.prototype.reloadTasks = function() {
+        this.clearTasksArea();
+        this.clearCompletedTasksArea();
+        this.restoreTasks();
     };
 
     /**
