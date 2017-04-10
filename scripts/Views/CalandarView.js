@@ -43,6 +43,7 @@ define(function (require) {
         this.reloadCalandar = this.reloadCalandar.bind(this);
         this.onAddButtonClick = this.onAddButtonClick.bind(this);
         //this.disableAddButton = this.disableAddButton.bind(this);
+        //this.editCalandarTask = this.editCalandarTask.bind(this);
     };
 
     CalandarView.prototype.enableCalandarEvents = function () {
@@ -55,6 +56,7 @@ define(function (require) {
         $('.js-calandar-task').on('dblclick', this.editEvent);
         $('.js-next-month').on('click', this.nextMonth);
         $('.js-last-month').on('click', this.lastMonth);
+        $('.calandarBase').on('click', '.js-calandar-task', this.editCalandarTask);
     };
 
     CalandarView.prototype.disable = function () {
@@ -63,7 +65,11 @@ define(function (require) {
         calandarDay.off('dragover', this.dragStart);
         calandarDay.off('drop', this.dropaableLocation);
         calandarDay.off('dblclick', this.enlargeDay);
+        calandarDay.off('click', this.selectedDay);
         $('.js-calandar-task').off('dblclick', this.editEvent);
+        $('.js-next-month').off('click', this.nextMonth);
+        $('.js-last-month').off('click', this.lastMonth);
+        $('.calandarBase').off('click', '.js-calandar-task', this.editCalandarTask);
     };
 
     CalandarView.prototype.dragableEvent = function (event) {
@@ -140,6 +146,7 @@ define(function (require) {
                 }
             }
         }
+        this.disable();
         this.enableCalandarEvents();
         this.loadTasksToCalandar();
     };
@@ -215,6 +222,13 @@ define(function (require) {
         $('.js-close-modal').on('click', this.closeModal);
     };
 
+    CalandarView.prototype.editCalandarTask = function() {
+        event.stopPropagation();
+        var $target = $(event.currentTarget);
+        alert('test');
+
+    };
+
     CalandarView.prototype.closeModal = function () {
         $('.js-task-group').remove();
     };
@@ -257,4 +271,3 @@ define(function (require) {
 
     return CalandarView;
 });
-
